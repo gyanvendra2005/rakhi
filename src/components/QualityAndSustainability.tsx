@@ -21,8 +21,11 @@ export default function QualityAndSustainability() {
             </div>
 
             <h2>
-              Lorem ipsum is standard placeholder text used in design and publishing.
+             Precision-driven quality you can rely on
             </h2>
+            <p>
+              We maintain rigorous quality standards across every stage of the moulding process, from design and tooling to production and final inspection. Our controlled processes, attention to detail, and consistent checks ensure reliable performance, dimensional accuracy, and high-quality results.
+            </p>
 
             <div className="sustainability-button-wrapper">
               <a href="#quality-details" className="btn-red-pill">
