@@ -76,11 +76,14 @@ export default function Clients() {
     },
   ];
 
+  // Duplicate logos so the slider has enough items to scroll when slidesToShow is 6
+  const extendedLogos = [...logos, ...logos, ...logos];
+
   const settings = {
     dots: false,
     infinite: true,
-    speed: 6000,
-    slidesToShow: 6,
+    speed: 4000,
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 0,
@@ -115,7 +118,7 @@ export default function Clients() {
         {/* White Rounded Container with Thin Border */}
         <div className="clients-box">
           <Slider {...settings}>
-            {logos.map((logo, idx) => (
+            {extendedLogos.map((logo, idx) => (
               <div key={idx}>
                 <div className="client-logo-item">
                   {logo.element}

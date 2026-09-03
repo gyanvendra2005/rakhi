@@ -18,7 +18,7 @@ export default function Products() {
     },
     {
       title: 'Cabin',
-      image: 'https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=800&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop',
     },
   ];
 
