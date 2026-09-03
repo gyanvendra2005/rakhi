@@ -12,19 +12,19 @@ export default function Capabilities() {
     {
       title: 'Insert Moulding',
       icon: (
-        <img className="capability-icon" src="/capaicon.png" alt="Insert Moulding" />
+        <img className="capability-icon" src="/2cap.png" alt="Insert Moulding" />
       ),
     },
     {
       title: 'Mould Manufacturing',
       icon: (
-        <img className="capability-icon" src="/capaicon.png" alt="Mould Manufacturing" />
+        <img className="capability-icon" src="/3cap.png" alt="Mould Manufacturing" />
       ),
     },
     {
       title: 'Over Moulding',
       icon: (
-        <img className="capability-icon" src="/capaicon.png" alt="Over Moulding" />
+        <img className="capability-icon" src="/4cap.png" alt="Over Moulding" />
       ),
     },
   ];
