@@ -23,7 +23,7 @@ export default function QualityAndSustainability() {
             <h2>
              Precision-driven quality you can rely on
             </h2>
-            <p>
+            <p className="section-paragraph">
               We maintain rigorous quality standards across every stage of the moulding process, from design and tooling to production and final inspection. Our controlled processes, attention to detail, and consistent checks ensure reliable performance, dimensional accuracy, and high-quality results.
             </p>
 
@@ -47,7 +47,7 @@ export default function QualityAndSustainability() {
               Sustainability
             </h2>
 
-            <p>
+            <p className="section-paragraph">
               Our processes and techniques are designed to minimize the energy and resource consumption as well as minimize the waste produced as part of the moulding process.
             </p>
 

@@ -5,20 +5,20 @@ import Seperator from './Seperator';
 export default function Products() {
   const productsList = [
     {
-      title: 'Cabin',
-      image: 'https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=800&auto=format&fit=crop',
+      title: 'Shock Absorber ',
+      image: '/shock_absorb.png',
     },
     {
-      title: 'Assemblies',
-      image: 'https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=800&auto=format&fit=crop',
+      title: '2W Switch Housing',
+      image: '/2w-switch.png',
     },
     {
-      title: 'Electronics',
-      image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop',
+      title: 'Floor Mat',
+      image: '/flor-mat.png',
     },
     {
-      title: 'Cabin',
-      image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop',
+      title: 'Handle Grip',
+      image: '/2w-switch.png',
     },
   ];
 
