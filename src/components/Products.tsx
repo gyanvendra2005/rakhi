@@ -39,12 +39,12 @@ export default function Products() {
 
             <div className="products-btn-wrapper">
               <a href="#all-products" className="btn-red-pill">
-                <span className="btn-circle-icon">
+                <div className="btn-cir">
                   <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.8 1.8L7 7L1.8 12.2" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M1.8 1.8L7 7L1.8 12.2" stroke="white" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                </span>
-                <span>Explore all products</span>
+                </div>
+                <div className="btn-text">Explore all products</div>
               </a>
             </div>
           </div>

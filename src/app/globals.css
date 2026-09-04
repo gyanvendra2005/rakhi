@@ -1496,7 +1496,7 @@ p.section-paragraph {
   grid-column: span 5 / span 5;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 7rem;
 }
 
 .footer-logo-link {
@@ -1504,7 +1504,7 @@ p.section-paragraph {
 }
 
 .footer-logo-img {
-  height: 2.5rem;
+  height: 3.5rem;
   width: auto;
   object-fit: contain;
 }
