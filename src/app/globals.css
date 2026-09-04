@@ -1339,8 +1339,8 @@ p.section-paragraph {
   padding: 1.5rem;
   background-color: #ffffff;
   transition: background-color 0.2s ease;
-  border-right: 1px solid #f1f5f9;
-  border-bottom: 1px solid #f1f5f9;
+  /* border-right: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9; */
 }
 
 .client-logo-item:hover {
@@ -1957,10 +1957,6 @@ p.section-paragraph {
   transition: background-color 0.2s ease;
 }
 
-.client-logo-item:hover {
-  /* background-color: #fbfbfb; */
-}
-
 .client-logo-img {
   max-width: 180px;
   max-height: 80px;
@@ -1996,10 +1992,6 @@ p.section-paragraph {
   /* border-right: 1px solid #f1f5f9; */
   box-shadow: none !important;
   transition: background-color 0.2s ease;
-}
-
-.client-logo-item:hover {
-  /* background-color: #fbfbfb; */
 }
 
 .client-logo-img {
