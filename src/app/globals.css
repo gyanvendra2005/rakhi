@@ -678,6 +678,7 @@ p.section-paragraph {
   border-radius: 1rem;
   padding: 2rem;
   display: flex;
+  height:220px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -697,8 +698,8 @@ p.section-paragraph {
 }
 
 .capability-icon {
-  width: 4rem;
-  height: 4rem;
+  width: 7rem;
+  height: 7rem;
   object-fit: contain;
 }
 
