@@ -28,13 +28,15 @@ export default function Home() {
           {/* 7. Global Presence & Map */}
       <GlobalPresence />
 
+  {/* 9. Clients Showcase */}
+      <Clients />
+
       {/* 5. Capabilities */}
       <Capabilities />
 
       {/* 6. Quality Assurance & Sustainability */}
       <QualityAndSustainability />
-{/* 9. Clients Showcase */}
-      {/* <Clients /> */}
+
   
 
       {/* 8. What's New & Awards */}

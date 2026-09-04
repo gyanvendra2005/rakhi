@@ -11,7 +11,7 @@ export default function WhatsNew() {
 
       <div className="container-global news-container">
         {/* Top Accent Line */}
-        <div className="news-top-separator" />
+        {/* <div className="news-top-separator" /> */}
 
         {/* Section Title */}
         <h2 className="section-heading text-slate-900">

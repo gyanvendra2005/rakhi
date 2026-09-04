@@ -1,3 +1,4 @@
+@import url("https://use.typekit.net/mpb6mmt.css");
 @import "tailwindcss";
 
 /* =========================================
@@ -10,20 +11,20 @@
   --primary-red-hover: #a6121b;
   --dark-bg: #141414;
   --card-bg: #1f1f1f;
-  --font-header: "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-display: "Neue Haas Grotesk Display Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-heading: "neue-haas-grotesk-display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-text: "neue-haas-grotesk-text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-header: var(--font-heading);
+  --font-display: var(--font-text);
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-display);
+  font-family: var(--font-text);
   overflow-x: hidden;
 }
 
-/* Header and Headings Font Family */
-header, 
-nav, 
+/* Headings Font Family & Specifications (neue-haas-grotesk-display, 500 Medium, 64px/74px, 0% letter-spacing) */
 h1, 
 h2, 
 h3, 
@@ -31,24 +32,46 @@ h4,
 h5, 
 h6, 
 .font-header, 
-.nav-link {
-  font-family: var(--font-header);
+.font-heading,
+.heading-about,
+.section-heading,
+.banner-headline,
+.banner-innovation {
+  font-family: var(--font-heading);
 }
 
-/* Display & Body Text Font Family */
+h1,
+h2,
+.heading-about,
+.section-heading,
+.banner-headline {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 74px;
+  letter-spacing: 0;
+}
+
+/* Text & Body Font Family (neue-haas-grotesk-text) */
 p, 
 span, 
 div, 
 a, 
 button, 
-.font-display {
-  font-family: var(--font-display);
+input,
+textarea,
+.font-display,
+.font-text,
+.about-text,
+.section-paragraph,
+.banner-subtitle {
+  font-family: var(--font-text);
 }
 
 header nav a, 
 header button, 
 header span {
-  font-family: var(--font-header);
+  font-family: var(--font-text);
 }
 
 /* Custom scrollbar */
@@ -73,60 +96,80 @@ header span {
   padding-right: 8rem;
 }
 
-/* Global Red Pill Button matching exact Figma reference */
+/* Global Red Pill Button matching exact CTA reference */
 .btn-red-pill {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  gap: 0.875rem;
-  background-color: #c91823;
-  color: #ffffff;
-  font-family: var(--font-header);
-  font-size: 0.9375rem;
-  font-weight: 600;
-  padding: 0.375rem 1.625rem 0.375rem 0.375rem;
-  border-radius: 9999px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 14px rgba(201, 24, 35, 0.3);
   text-decoration: none;
   border: none;
   cursor: pointer;
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+  transition: transform 0.2s ease;
 }
 
-.btn-red-pill:hover {
-  background-color: #a6121b;
-  box-shadow: 0 6px 18px rgba(201, 24, 35, 0.45);
-}
-
-.btn-circle-icon {
-  width: 2.25rem;
-  height: 2.25rem;
-  background-color: #c91823;
-  border: 2px solid #ffffff;
-  border-radius: 9999px;
+.btn-cir {
+  width: 50px;
+  height: 50px;
+  background-color: #ba141a;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
-  font-size: 0.875rem;
-  font-weight: 900;
+  position: relative;
+  z-index: 2;
+  box-shadow: none;
   flex-shrink: 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease;
+  transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
-.btn-red-pill:hover .btn-circle-icon {
-  transform: translateX(2px);
+.btn-cir svg {
+  width: 10px;
+  height: 14px;
+  margin-left: 2px;
+}
+
+.btn-text {
+  background-color: #ba141a;
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 14px 28px 14px 30px;
+  border-radius: 0 16px 16px 0;
+  margin-left: -22px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  box-shadow: none;
+  transition: background-color 0.25s ease;
+}
+
+.btn-red-pill:hover .btn-cir,
+.btn-red-pill:hover .btn-text {
+  background-color: #a01015;
+}
+
+.btn-red-pill:hover .btn-cir {
+  transform: translateX(3px);
 }
 
 /* Global Section Heading and Paragraph Typography */
 .heading-about, 
 .section-heading,
 h2.section-heading {
-  font-family: var(--font-header);
-  font-weight: 500;
-  font-size: 64px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 52px;
   line-height: 74px;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   color: #0f172a;
 }
 
@@ -138,7 +181,7 @@ p.section-paragraph {
   font-size: 18px;
   line-height: 30px;
   letter-spacing: 0%;
-  color: #4b5563;
+  /* color: #4b5563; */
 }
 
 .text-gradient-primary,
@@ -333,7 +376,7 @@ p.section-paragraph {
 
 .hero-separator {
   width: 100%;
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid #fff;
   margin-bottom: 2rem;
 }
 
@@ -345,17 +388,17 @@ p.section-paragraph {
 }
 
 .banner-innovation {
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 46px;
+  font-weight: 600;
+  font-size: 31px;
+  line-height: 22px;
   color: #ffffff;
 }
 
 .banner-headline {
-  font-family: var(--font-display);
-  font-weight: 500;
-  font-size: 64px;
-  line-height: 74px;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 67px;
   text-transform: capitalize;
   color: #ffffff;
 }
@@ -437,14 +480,14 @@ p.section-paragraph {
 
 .stat-rupee-wrapper {
   display: flex;
-  align-items: baseline;
+  /* align-items: baseline; */
   justify-content: center;
 }
 
 .stat-rupee-symbol {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-top: -0.5rem;
+  font-size: 30px;
+  font-weight: 300;
+  /* margin-top: -0.5rem; */
   margin-right: 0.25rem;
 }
 
@@ -520,7 +563,7 @@ p.section-paragraph {
   border: 1px solid rgba(226, 232, 240, 0.8);
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
   transition: all 0.3s ease;
   cursor: pointer;
 }
@@ -531,7 +574,7 @@ p.section-paragraph {
 
 .product-image-area {
   position: relative;
-  height: 12rem;
+  height: 15rem;
   background: linear-gradient(to bottom, #f1f5f9, rgba(226, 232, 240, 0.8));
   overflow: hidden;
   display: flex;
@@ -626,7 +669,7 @@ p.section-paragraph {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1.5rem;
-  padding-top: 1rem;
+  padding-top: 4rem;
 }
 
 .capability-card {
@@ -676,7 +719,7 @@ p.section-paragraph {
 .global-presence-section {
   padding-top: 3rem;
   /* padding-bottom: 3rem; */
-  background-color: #f0f4f8;
+  background: linear-gradient(180deg, #E6EEF4 0%, rgba(255, 255, 255, 0) 100%);
   border-top: 1px solid #e2e8f0;
   border-radius: 80px 80px 0 0;
 
@@ -694,8 +737,8 @@ p.section-paragraph {
 
 .global-presence-separator {
   width: 100%;
-  border-top: 1px solid rgba(203, 213, 225, 0.8);
-  margin-bottom: 1.5rem;
+    border-top: 0.5px solid #1a2b42b0;
+  margin-top: 1.5rem;
 }
 
 .global-presence-header-grid {
@@ -754,8 +797,8 @@ p.section-paragraph {
 }
 
 .global-presence-stat-number {
-  font-size: 3rem;
-  font-weight: 800;
+  font-size: 4rem;
+  font-weight: 600;
   letter-spacing: -0.025em;
 }
 
@@ -868,8 +911,8 @@ p.section-paragraph {
 
 .sustainability-container {
   display: grid;
-  grid-template-columns: 7fr 5fr;
-  gap: 10rem;
+  grid-template-columns: 7fr 4fr;
+  gap: 17rem;
   align-items: stretch;
 }
 
@@ -906,18 +949,20 @@ p.section-paragraph {
 }
 
 .quality-label {
-  font-size: 11px;
+  font-size: 30px;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  /* letter-spacing: 0.05em; */
   color: #1e293b;
 }
 
 .quality-content h2 {
-  font-size: 1.5rem;
-  font-weight: 800;
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0;
   color: #0f172a;
-  line-height: 1.25;
 }
 
 .sustainability-button-wrapper {
@@ -945,10 +990,12 @@ p.section-paragraph {
 }
 
 .sustainability-content h2 {
-  font-size: 2.25rem;
-  font-weight: 800;
+  font-family: var(--font-heading);
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 74px;
+  letter-spacing: 0;
   color: #ffffff;
-  letter-spacing: -0.025em;
 }
 
 .sustainability-content p {
@@ -959,7 +1006,7 @@ p.section-paragraph {
 
 .card-bottom-line {
   width: 100%;
-  border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+  border-bottom: 1px solid #fff;
   padding-top: 5rem;
 }
 
@@ -967,9 +1014,9 @@ p.section-paragraph {
    8. NEWS & EVENTS SECTION (Desktop Default)
    ========================================= */
 .news-section {
-  padding-top: 5rem;
+  padding-top: 4rem;
   padding-bottom: 5rem;
-  background-image: url('/capabilities.png');
+  background-image: url('/6233 2.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1267,14 +1314,14 @@ p.section-paragraph {
 .clients-section {
   padding-top: 3rem;
   padding-bottom: 3rem;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
 }
 
 .clients-box {
   background-color: #ffffff;
-  border-radius: 1rem;
-  border: 1px solid rgba(226, 232, 240, 0.8);
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  /* border-radius: 1rem; */
+  /* border: 1px solid rgba(226, 232, 240, 0.8); */
+  /* box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); */
   overflow: hidden;
 }
 
@@ -1669,7 +1716,7 @@ p.section-paragraph {
   }
   .quality-content h2 {
     color: #0f172a;
-    font-size: 28px;
+    font-size: 18px;
     font-weight: 800;
     line-height: 32px;
 }
@@ -1690,7 +1737,7 @@ p.section-paragraph {
 /* --- MAX-WIDTH 768px (MEDIUM TABLET OVERRIDES) --- */
 @media (max-width: 768px) {
   .global-presence-section {
-    background-color: #f0f4f8;
+    /* background-color: #f0f4f8; */
     border-top: 1px solid #e2e8f0;
     border-radius: 40px 40px 0 0;
     padding-top: 2.5rem;
@@ -1874,4 +1921,98 @@ p.section-paragraph {
 .navbar-container{
   height: 3.5rem;
 }
+}
+
+
+
+
+/* =========================================
+   CLIENTS SECTION (Exact Figma Match - No Shadow)
+   ========================================= */
+.clients-section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  /* background-color: #ffffff; */
+}
+
+.clients-box {
+  background-color: #ffffff;
+  /* border: 1px solid #f1f5f9; */
+  border-radius: 0;
+  box-shadow: none !important;
+  overflow: hidden;
+}
+
+.client-logo-item {
+  width: 100%;
+  height: 208px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  background-color: #ffffff;
+  /* border-right: 1px solid #f1f5f9; */
+  box-shadow: none !important;
+  transition: background-color 0.2s ease;
+}
+
+.client-logo-item:hover {
+  /* background-color: #fbfbfb; */
+}
+
+.client-logo-img {
+  max-width: 180px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}/* =========================================
+   CLIENTS SECTION (Exact Figma Match - No Shadow)
+   ========================================= */
+.clients-section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  /* background-color: #ffffff; */
+}
+
+.clients-box {
+  /* background-color: #ffffff; */
+  /* border: 1px solid #f1f5f9; */
+  border-radius: 0;
+  box-shadow: none !important;
+  overflow: hidden;
+}
+
+.client-logo-item {
+  width: 100%;
+  height: 208px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 2rem 1.5rem; */
+  /* background-color: #ffffff; */
+  /* border-right: 1px solid #f1f5f9; */
+  box-shadow: none !important;
+  transition: background-color 0.2s ease;
+}
+
+.client-logo-item:hover {
+  /* background-color: #fbfbfb; */
+}
+
+.client-logo-img {
+  max-width: 220px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+
+.separator-container{
+  border-top: 0.5px solid #1a2b42b0;
+    width: 100%;
+    margin-bottom: 2rem;
 }

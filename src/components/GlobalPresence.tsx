@@ -24,10 +24,12 @@ export default function GlobalPresence() {
               </p>
               <div>
                 <a href="#about" className="btn-red-pill">
-                  <span className="btn-circle-icon">
-                    &rsaquo;
-                  </span>
-                  <span>Know more</span>
+                  <div className="btn-cir">
+                    <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.8 1.8L7 7L1.8 12.2" stroke="white" strokeWidth="3.2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                  <div className="btn-text">Know more</div>
                 </a>
               </div>
             </div>
@@ -153,7 +155,7 @@ export default function GlobalPresence() {
           </div>
         </div>
       </div>
-      <Clients/>
+      {/* <Clients/> */}
     </section>
   );
 }
