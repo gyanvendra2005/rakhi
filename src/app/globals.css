@@ -179,7 +179,7 @@ p.section-paragraph {
   font-family: var(--font-display);
   font-weight: 400;
   font-size: 18px;
-  line-height: 30px;
+  line-height: 27px;
   letter-spacing: 0%;
   /* color: #4b5563; */
 }
@@ -433,7 +433,7 @@ p.section-paragraph {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 3rem;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .about-content {
@@ -505,6 +505,7 @@ p.section-paragraph {
   grid-column: span 5 / span 5;
   display: flex;
   justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .about-image-wrapper {
