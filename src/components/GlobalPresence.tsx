@@ -83,7 +83,7 @@ export default function GlobalPresence() {
             <div className="global-presence-map-canvas">
               {/* Vector World Map */}
               <img 
-                src="/worldmap-Photoroom.png" 
+                src="/newworld.png" 
                 alt="World Map vector" 
                 className="global-presence-world-svg"
               />
