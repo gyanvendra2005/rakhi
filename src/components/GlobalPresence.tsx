@@ -83,13 +83,13 @@ export default function GlobalPresence() {
             <div className="global-presence-map-canvas">
               {/* Vector World Map */}
               <img 
-                src="/world-map.svg" 
+                src="/worldmap-Photoroom.png" 
                 alt="World Map vector" 
                 className="global-presence-world-svg"
               />
 
               {/* Dotted Leader Lines */}
-              <svg viewBox="0 0 1000 500" className="global-presence-svg-lines">
+              {/* <svg viewBox="0 0 1000 500" className="global-presence-svg-lines">
                 <line x1="220" y1="130" x2="280" y2="130" className="dot-line" />
                 <line x1="240" y1="210" x2="290" y2="210" className="dot-line" />
                 <line x1="490" y1="110" x2="520" y2="110" className="dot-line" />
@@ -99,10 +99,10 @@ export default function GlobalPresence() {
                 <line x1="750" y1="190" x2="800" y2="190" className="dot-line" />
                 <line x1="760" y1="260" x2="810" y2="260" className="dot-line" />
                 <line x1="730" y1="320" x2="780" y2="320" className="dot-line" />
-              </svg>
+              </svg> */}
 
               {/* Pins & Country Labels */}
-              <div className="map-pin pin-canada">
+              {/* <div className="map-pin pin-canada">
                 <span className="map-pin-dot"></span>
                 <span className="map-pin-label">Canada</span>
               </div>
@@ -150,7 +150,7 @@ export default function GlobalPresence() {
               <div className="map-pin pin-indonesia">
                 <span className="map-pin-dot"></span>
                 <span className="map-pin-label">Indonesia</span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

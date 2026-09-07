@@ -3,11 +3,19 @@ import React from 'react';
 export default function HeroBanner() {
   return (
     <section className="hero-section">
-      {/* Background Image */}
-      <div className="hero-bg-img" />
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="hero-bg-video"
+      >
+        <source src="/rikki banner.webm" type="video/webm" />
+      </video>
       
       {/* Overlay gradient */}
-      <div className="hero-overlay" />
+      {/* <div className="hero-overlay" /> */}
 
       {/* Content Container */}
       <div className="banner-content hero-container container-global">
