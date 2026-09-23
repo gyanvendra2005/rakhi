@@ -14,15 +14,15 @@ export default function GlobalPresence() {
           {/* Header Row */}
           <div className="global-presence-header-grid">
             <div className="global-presence-header-left">
-              <h2 className="section-heading">
+              <h2 className="section-heading" data-reveal="left">
                 Global Presence
               </h2>
             </div>
             <div className="global-presence-header-right">
-              <p className="section-paragraph">
+              <p className="section-paragraph" data-reveal="right">
                 Rikki Plastic Pvt. Ltd. is a professionally managed partnership firm in the business of manufacturing and Supply of Automotive components. We have pleasure in introducing ourselves as a leading manufacturer of Plastic Components for automotive and allied industries...
               </p>
-              <div>
+              <div data-reveal="right" data-reveal-delay="1">
                 <a href="#about" className="btn-red-pill">
                   <div className="btn-cir">
                     <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +40,7 @@ export default function GlobalPresence() {
             {/* Left Stats Column */}
             <div className="global-presence-stats-col">
               {/* Stat 1: 20+ */}
-              <div className="global-presence-stat-item">
+              <div className="global-presence-stat-item" data-reveal="left" data-reveal-delay="1">
                 <div className="global-presence-stat-icon-wrap">
                   <img className="global-presence-stat-icon" src="/1.png" alt="Icon 1" />
                 </div>
@@ -53,7 +53,7 @@ export default function GlobalPresence() {
               </div>
 
               {/* Stat 2: 100+ */}
-              <div className="global-presence-stat-item">
+              <div className="global-presence-stat-item" data-reveal="left" data-reveal-delay="2">
                 <div className="global-presence-stat-icon-wrap">
                   <img className="global-presence-stat-icon" src="/2.png" alt="Icon 2" />
                 </div>
@@ -66,7 +66,7 @@ export default function GlobalPresence() {
               </div>
 
               {/* Stat 3: 10+ */}
-              <div className="global-presence-stat-item">
+              <div className="global-presence-stat-item" data-reveal="left" data-reveal-delay="3">
                 <div className="global-presence-stat-icon-wrap">
                   <img className="global-presence-stat-icon" src="/3.png" alt="Icon 3" />
                 </div>
@@ -80,7 +80,7 @@ export default function GlobalPresence() {
             </div>
 
             {/* Right Map Canvas */}
-            <div className="global-presence-map-canvas">
+            <div className="global-presence-map-canvas" data-reveal="scale">
               {/* Vector World Map */}
               <img 
                 src="/newworld.png" 

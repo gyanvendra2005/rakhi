@@ -14,14 +14,14 @@ export default function WhatsNew() {
         {/* <div className="news-top-separator" /> */}
 
         {/* Section Title */}
-        <h2 className="section-heading text-slate-900">
+        <h2 className="section-heading text-slate-900" data-reveal="left">
           News &amp; Events
         </h2>
 
         {/* 2 Column Social Cards Grid */}
         <div className="news-cards-grid">
           {/* Card 1: Yamaha Appreciation Award */}
-          <div className="social-post-card group">
+          <div className="social-post-card group" data-reveal="left" data-reveal-delay="1">
             {/* Header */}
             <div className="post-header">
               <div className="post-author-wrap">
@@ -87,7 +87,7 @@ export default function WhatsNew() {
           </div>
 
           {/* Card 2: Aligarh Project Expo Event */}
-          <div className="social-post-card group">
+          <div className="social-post-card group" data-reveal="right" data-reveal-delay="1">
             {/* Header */}
             <div className="post-header">
               <div className="post-author-wrap">
@@ -149,7 +149,7 @@ export default function WhatsNew() {
             {/* Post Image */}
             <div className="post-event-image-area">
               <img 
-                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop" 
+                src="https://placehold.co/600x400" 
                 alt="Project Expo Event" 
                 className="post-event-image"
               />

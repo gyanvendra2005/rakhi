@@ -36,15 +36,15 @@ export default function Capabilities() {
         {/* Header Row */}
         <div className="capabilities-header-grid">
           <div className="capabilities-header-left">
-            <h2 className="section-heading">
+            <h2 className="section-heading" data-reveal="left">
               Our Capabilities
             </h2>
           </div>
           <div className="capabilities-header-right">
-            <p className="section-paragraph">
+            <p className="section-paragraph" data-reveal="right">
               High-speed automated injection molding, precision tool manufacturing, insert molding, and sub-assembly processes engineered to deliver zero-defect automotive components for global OEMs.
             </p>
-            <div className="capabilities-btn-wrapper">
+            <div className="capabilities-btn-wrapper" data-reveal="right" data-reveal-delay="1">
               <a href="#capabilities-details" className="btn-red-pill">
                 <div className="btn-cir">
                   <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -60,7 +60,12 @@ export default function Capabilities() {
         {/* 4 Cards Grid */}
         <div className="capabilities-cards-grid">
           {capabilitiesList.map((item, idx) => (
-            <div key={idx} className="capability-card group">
+            <div
+              key={idx}
+              className="capability-card group"
+              data-reveal="scale"
+              data-reveal-delay={String((idx % 4) + 1)}
+            >
               {/* Icon Container */}
               <div className="capability-icon-container">
                 {item.icon}

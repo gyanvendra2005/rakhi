@@ -31,9 +31,11 @@ export default function Navbar() {
 
               {aboutDropdownOpen && (
                 <div className="navbar-dropdown-menu">
-                  <a href="#about" className="navbar-dropdown-link">Company Overview</a>
-                  <a href="#infrastructure" className="navbar-dropdown-link">Management &amp; Vision</a>
-                  <a href="#quality" className="navbar-dropdown-link">Quality Certifications</a>
+                  <a href="/about/overview" className="navbar-dropdown-link">Over View</a>
+                  <a href="/about/history" className="navbar-dropdown-link">History/ Time Line</a>
+                  <a href="/about/mission-and-vision" className="navbar-dropdown-link">Mission &amp; Vision</a>
+                  <a href="/about/core-values" className="navbar-dropdown-link">Core Values</a>
+                  <a href="/about/management" className="navbar-dropdown-link">Management</a>
                 </div>
               )}
             </div>

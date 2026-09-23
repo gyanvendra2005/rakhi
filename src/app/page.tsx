@@ -1,4 +1,5 @@
 import React from 'react';
+import ScrollReveal from '@/components/ScrollReveal';
 import Navbar from '@/components/Navbar';
 import HeroBanner from '@/components/HeroBanner';
 import AboutUs from '@/components/AboutUs';
@@ -13,6 +14,7 @@ import Footer from '@/components/Footer';
 export default function Home() {
   return (
     <div className="min-h-screen bg-white text-slate-800 font-sans selection:bg-red-500 selection:text-white">
+      <ScrollReveal />
       {/* 1. Header / Navbar */}
       <Navbar />
 
