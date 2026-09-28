@@ -6,12 +6,13 @@ import { ChevronDown, Menu, X, Search } from 'lucide-react';
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [aboutDropdownOpen, setAboutDropdownOpen] = useState(false);
+  const [sustainabilityDropdownOpen, setSustainabilityDropdownOpen] = useState(false);
 
   return (
     <header className="navbar-header">
       <div className="container-global navbar-container">
         {/* Left Brand Logo Image (logo.png) */}
-        <a href="#" className="navbar-brand">
+        <a href="/" className="navbar-brand">
           <img src="/logo2.png" alt="Company Logo" className="logo-img" />
         </a>
 
@@ -35,12 +36,32 @@ export default function Navbar() {
                   <a href="/about/history" className="navbar-dropdown-link">History/ Time Line</a>
                   <a href="/about/mission-and-vision" className="navbar-dropdown-link">Mission &amp; Vision</a>
                   <a href="/about/core-values" className="navbar-dropdown-link">Core Values</a>
-                  <a href="/about/management" className="navbar-dropdown-link">Management</a>
+                  {/* <a href="/about/management" className="navbar-dropdown-link">Management</a> */}
                 </div>
               )}
             </div>
 
-            <a href="#sustainability" className="navbar-nav-item">Sustainability</a>
+            {/* Sustainability Dropdown */}
+            <div
+              className="navbar-dropdown-wrap"
+              onMouseEnter={() => setSustainabilityDropdownOpen(true)}
+              onMouseLeave={() => setSustainabilityDropdownOpen(false)}
+            >
+              <button className="navbar-nav-item">
+                <span>Sustainability</span>
+                <ChevronDown className="w-4 h-4 text-slate-500" />
+              </button>
+
+              {sustainabilityDropdownOpen && (
+                <div className="navbar-dropdown-menu">
+                  <a href="/sustainability/esg#csr" className="navbar-dropdown-link">CSR</a>
+                  <a href="/sustainability/esg#esg" className="navbar-dropdown-link">ESG</a>
+                  <a href="/sustainability/esg#csr-policy" className="navbar-dropdown-link">CSR Policy</a>
+                  <a href="/sustainability/esg#supp-sustainability" className="navbar-dropdown-link">Supp. Sustainability</a>
+                </div>
+              )}
+            </div>
+
             <a href="#capabilities" className="navbar-nav-item">Capabilities</a>
             <a href="#products" className="navbar-nav-item">Products</a>
             <a href="#contact" className="navbar-nav-item">Contact Us</a>

@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
 
 const team = [
   {
@@ -69,14 +68,8 @@ export default function Management() {
               </div>
 
               <div className="mgmt-card-name">{member.name}</div>
-              <div className="mgmt-card-role">{member.role}</div>
-              <a href={`tel:${member.contact.replace(/\s+/g, '')}`} className="mgmt-card-contact">
-                {member.contact}
-              </a>
 
-              <a href="#contact" className="mgmt-card-link">
-                READ MORE <ArrowRight className="w-3.5 h-3.5" />
-              </a>
+              <div className="mgmt-card-role-bar">{member.role}</div>
             </div>
           ))}
         </div>

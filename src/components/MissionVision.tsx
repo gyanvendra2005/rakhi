@@ -1,4 +1,14 @@
 import React from 'react';
+import { CircleDollarSign, BookOpen, Leaf, Award, Users, Eye } from 'lucide-react';
+
+const principles = [
+  { icon: CircleDollarSign, text: 'Prudent Financial and Cost Management' },
+  { icon: BookOpen, text: 'Knowledge Management Practices' },
+  { icon: Leaf, text: 'Continuing to be an environmentally conscious organization' },
+  { icon: Award, text: 'Becoming an Employer of Choice' },
+  { icon: Users, text: 'Highly Engaged Employees' },
+  { icon: Eye, text: 'Transparency in all aspects of our business' },
+];
 
 export default function MissionVision() {
   return (
@@ -67,6 +77,28 @@ export default function MissionVision() {
                 aliquip ex ea commodo consequat duis aute irure.
               </p>
             </div>
+          </div>
+        </div>
+
+        {/* Guiding Principles */}
+        <div className="mv-principles-section">
+          <div className="overview-eyebrow">
+            OUR PRINCIPLES
+            <span className="red-line"></span>
+          </div>
+          <h2 className="mv-principles-heading">
+            What <span className="ov2-heading-red">Guides Us</span>
+          </h2>
+
+          <div className="mv-principles-grid">
+            {principles.map(({ icon: Icon, text }) => (
+              <div className="mv-principle-item" key={text}>
+                <div className="mv-principle-icon-wrap">
+                  <Icon className="mv-principle-icon" strokeWidth={1.5} />
+                </div>
+                <span className="mv-principle-text">{text}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
