@@ -212,17 +212,14 @@ function Eyebrow({
   return (
     <div className="overview-eyebrow" {...rest}>
       {children}
-      <span className="red-line" style={{ width: '48px' }}></span>
+      <span className="red-line esgc-red-line-sm"></span>
     </div>
   );
 }
 
 function IconBadge({ Icon }: { Icon: React.ElementType }) {
   return (
-    <div
-      className="icon-badge w-11 h-11 rounded-full flex items-center justify-center shrink-0"
-      style={{ backgroundColor: '#fdecec', color: 'var(--primary-red)' }}
-    >
+    <div className="icon-badge">
       <Icon size={20} strokeWidth={1.8} />
     </div>
   );
@@ -230,36 +227,26 @@ function IconBadge({ Icon }: { Icon: React.ElementType }) {
 
 export default function ESGComponent() {
   return (
-    <div className="w-full bg-white text-slate-900 antialiased">
+    <div className="esgc-root">
       <ScrollReveal />
       {/* HERO SECTION */}
-      <section className="relative w-full bg-surface-dark text-white overflow-hidden py-16 md:py-24 border-b border-slate-800">
-        <div
-          className="absolute inset-0 z-0 opacity-15 bg-cover bg-center pointer-events-none"
-          style={{
-            backgroundImage:
-              "url('https://placehold.co/600x400')",
-          }}
-        ></div>
-        <div className="relative z-10 container-global flex flex-col gap-10">
-          <div className="max-w-3xl flex flex-col gap-4">
-            <div
-              className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase"
-              style={{ color: 'var(--primary-red)' }}
-              data-reveal
-            >
-              <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--primary-red)' }}></span>
+      <section className="esgc-hero">
+        <div className="esgc-hero-bg"></div>
+        <div className="esgc-hero-inner container-global">
+          <div className="esgc-hero-copy">
+            <div className="esgc-hero-badge" data-reveal>
+              <span className="esgc-dot-red"></span>
               Sustainability &amp; Governance
             </div>
             <h1
-              className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight"
+              className="esgc-hero-title"
               data-reveal
               data-reveal-delay="1"
             >
               Our approach to ESG at Rikki Plastic
             </h1>
             <p
-              className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal"
+              className="esgc-hero-desc"
               data-reveal
               data-reveal-delay="2"
             >
@@ -267,12 +254,9 @@ export default function ESGComponent() {
               our people, and our neighbours near our plants all matter to how we run the business — not as a side
               project, but as part of day-to-day operations.
             </p>
-            <div className="pt-2 flex flex-wrap items-center gap-4" data-reveal data-reveal-delay="3">
+            <div className="esgc-hero-cta-row" data-reveal data-reveal-delay="3">
               <RedPillCTA href="#csr" label="Explore CSR Programmes" />
-              <a
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 hover:bg-white/15 text-white text-sm font-semibold tracking-wide transition-colors border border-white/20"
-                href="#governance-report"
-              >
+              <a className="esgc-btn-outline" href="#governance-report">
                 <Download size={16} />
                 <span>Download 2024 ESG Report</span>
               </a>
@@ -280,72 +264,54 @@ export default function ESGComponent() {
           </div>
 
           {/* Metric Strip */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-2">
-            <div
-              className="bg-white/5 rounded-xl p-5 border border-slate-800 flex flex-col justify-between"
-              data-reveal="scale"
-              data-reveal-delay="1"
-            >
-              <span className="text-xs uppercase font-semibold text-slate-400 tracking-wider">Carbon Intensity</span>
-              <div className="my-2">
-                <span className="text-3xl font-extrabold text-white tracking-tight">-42.6%</span>
+          <div className="esgc-metric-grid">
+            <div className="esgc-metric-card" data-reveal="scale" data-reveal-delay="1">
+              <span className="esgc-metric-label">Carbon Intensity</span>
+              <div className="esgc-metric-value-wrap">
+                <span className="esgc-metric-value">-42.6%</span>
               </div>
-              <span className="text-xs text-slate-400">Scope 1 &amp; 2 reduction vs. 2020 baseline</span>
+              <span className="esgc-metric-sub">Scope 1 &amp; 2 reduction vs. 2020 baseline</span>
             </div>
-            <div
-              className="bg-white/5 rounded-xl p-5 border border-slate-800 flex flex-col justify-between"
-              data-reveal="scale"
-              data-reveal-delay="2"
-            >
-              <span className="text-xs uppercase font-semibold text-slate-400 tracking-wider">PCR Polymer Share</span>
-              <div className="my-2">
-                <span className="text-3xl font-extrabold text-white tracking-tight">68.4%</span>
+            <div className="esgc-metric-card" data-reveal="scale" data-reveal-delay="2">
+              <span className="esgc-metric-label">PCR Polymer Share</span>
+              <div className="esgc-metric-value-wrap">
+                <span className="esgc-metric-value">68.4%</span>
               </div>
-              <span className="text-xs text-slate-400">Integrated in automotive drive lines</span>
+              <span className="esgc-metric-sub">Integrated in automotive drive lines</span>
             </div>
-            <div
-              className="bg-white/5 rounded-xl p-5 border border-slate-800 flex flex-col justify-between"
-              data-reveal="scale"
-              data-reveal-delay="3"
-            >
-              <span className="text-xs uppercase font-semibold text-slate-400 tracking-wider">Renewable Power</span>
-              <div className="my-2">
-                <span className="text-3xl font-extrabold text-white tracking-tight">100%</span>
+            <div className="esgc-metric-card" data-reveal="scale" data-reveal-delay="3">
+              <span className="esgc-metric-label">Renewable Power</span>
+              <div className="esgc-metric-value-wrap">
+                <span className="esgc-metric-value">100%</span>
               </div>
-              <span className="text-xs text-slate-400">Faridabad operational plants grid</span>
+              <span className="esgc-metric-sub">Faridabad operational plants grid</span>
             </div>
-            <div
-              className="bg-white/5 rounded-xl p-5 border border-slate-800 flex flex-col justify-between"
-              data-reveal="scale"
-              data-reveal-delay="4"
-            >
-              <span className="text-xs uppercase font-semibold text-slate-400 tracking-wider">Audit Standards</span>
-              <div className="my-2">
-                <span className="text-3xl font-extrabold tracking-tight text-[var(--primary-red)]">GRI / IATF</span>
+            <div className="esgc-metric-card" data-reveal="scale" data-reveal-delay="4">
+              <span className="esgc-metric-label">Audit Standards</span>
+              <div className="esgc-metric-value-wrap">
+                <span className="esgc-metric-value esgc-metric-value-red">GRI / IATF</span>
               </div>
-              <span className="text-xs text-slate-400">Dual-accredited independent verification</span>
+              <span className="esgc-metric-sub">Dual-accredited independent verification</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* SECTION 1: United Nations SDGs */}
-      <section className="w-full py-16 lg:py-20 bg-white" id="esg">
-        <div className="container-global flex flex-col gap-10">
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
-            <div className="max-w-3xl flex flex-col gap-2">
+      <section className="esgc-section" id="esg">
+        <div className="container-global esgc-container-gap-lg">
+          <div className="esgc-sdg-header">
+            <div className="esgc-sdg-header-copy">
               <Eyebrow data-reveal="left">Global Alignment</Eyebrow>
               <h2
-                className="overview-heading"
-                style={{ marginBottom: 0, textTransform: 'none' }}
+                className="overview-heading esgc-heading-flush esgc-heading-normal"
                 data-reveal="left"
                 data-reveal-delay="1"
               >
                 Where we line up with the <span className="overview-heading-red">UN Sustainable Development Goals</span>
               </h2>
               <p
-                className="overview-text"
-                style={{ fontSize: '15px', marginTop: '0.5rem' }}
+                className="overview-text esgc-text-15 esgc-text-mt"
                 data-reveal="left"
                 data-reveal-delay="2"
               >
@@ -353,50 +319,38 @@ export default function ESGComponent() {
                 our CSR work genuinely overlap, and that&apos;s where we&apos;ve chosen to focus.
               </p>
             </div>
-            <a
-              className="inline-flex items-center gap-2 text-sm font-semibold transition-colors group shrink-0"
-              style={{ color: 'var(--primary-red)' }}
-              href="#governance-report"
-            >
+            <a className="esgc-link-red esgc-link-group" href="#governance-report">
               <span>View our full ESG report</span>
-              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              <ArrowRight size={16} className="esgc-link-arrow" />
             </a>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <div className="esgc-sdg-grid">
             {/* Spotlight Card */}
-            <div
-              className="lg:col-span-4 bg-slate-50 rounded-2xl p-6 lg:p-7 border border-slate-200 flex flex-col justify-between group"
-              data-reveal="left"
-            >
-              <div className="flex flex-col gap-3">
-                <span
-                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold w-fit"
-                  style={{ backgroundColor: '#fdecec', color: 'var(--primary-red)' }}
-                >
-                  Circularity in Action
-                </span>
-                <h3 className="text-xl font-bold text-slate-900">Decarbonizing our polymer supply chain</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">
+            <div className="esgc-spotlight-card" data-reveal="left">
+              <div className="esgc-spotlight-top">
+                <span className="esgc-badge-pill">Circularity in Action</span>
+                <h3 className="esgc-spotlight-title">Decarbonizing our polymer supply chain</h3>
+                <p className="esgc-spotlight-text">
                   We blend recycled feedstock into precision drive-gear parts wherever the tolerances allow it — the
                   goal is to displace virgin resin without compromising on what the OEM actually needs.
                 </p>
               </div>
-              <div className="my-5 relative w-full h-48 rounded-xl overflow-hidden border border-slate-200">
+              <div className="esgc-spotlight-img-wrap">
                 <img
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="esgc-spotlight-img"
                   alt="Stylized artistic visual of planet earth integrated with green bio-polymers"
                   src="https://placehold.co/600x400"
                 />
               </div>
-              <div className="pt-2 flex items-center justify-between text-xs text-slate-500 font-medium border-t border-slate-200">
+              <div className="esgc-spotlight-footer">
                 <span>Audited standard: GRI 301/302</span>
-                <span className="font-semibold" style={{ color: 'var(--primary-red)' }}>ISO 14001:2015</span>
+                <span className="esgc-text-red-semibold">ISO 14001:2015</span>
               </div>
             </div>
 
             {/* SDG Grid */}
-            <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="esgc-sdg-cards-grid">
               {sdgGoals.map((goal, idx) => (
                 <div
                   key={goal.number}
@@ -404,13 +358,13 @@ export default function ESGComponent() {
                   data-reveal="scale"
                   data-reveal-delay={String((idx % 4) + 1)}
                 >
-                  <div className="flex items-center justify-between">
+                  <div className="esgc-sdg-card-top">
                     <span className="sdg-card-number">{goal.number}</span>
-                    <span className="text-xs text-slate-400 font-mono">{goal.ref}</span>
+                    <span className="esgc-sdg-ref">{goal.ref}</span>
                   </div>
                   <div>
-                    <h4 className="text-base font-bold text-slate-900 mb-1.5">{goal.title}</h4>
-                    <p className="text-xs text-slate-600 leading-relaxed">{goal.text}</p>
+                    <h4 className="esgc-card-title">{goal.title}</h4>
+                    <p className="esgc-card-text">{goal.text}</p>
                   </div>
                 </div>
               ))}
@@ -420,57 +374,56 @@ export default function ESGComponent() {
       </section>
 
       {/* SECTION 2: CSR - Commitment & Environment */}
-      <section className="w-full py-16 lg:py-20 bg-slate-50 border-y border-outline-border" id="csr">
-        <div className="container-global flex flex-col gap-16">
+      <section className="esgc-section esgc-section-alt" id="csr">
+        <div className="container-global esgc-container-gap-lg">
           {/* Part A: Creating a Difference */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            <div className="lg:col-span-6 flex flex-col gap-5">
+          <div className="esgc-two-col-grid">
+            <div className="esgc-two-col-left">
               <Eyebrow data-reveal="left">Our Commitment</Eyebrow>
               <h2
-                className="overview-heading"
-                style={{ marginBottom: 0 }}
+                className="overview-heading esgc-heading-flush"
                 data-reveal="left"
                 data-reveal-delay="1"
               >
                 Creating a <span className="overview-heading-red">Difference</span>
               </h2>
-              <p className="overview-text" style={{ fontSize: '15px' }} data-reveal="left" data-reveal-delay="2">
+              <p className="overview-text esgc-text-15" data-reveal="left" data-reveal-delay="2">
                 The Rikki Plastic CSR Foundation works close to home — in the towns around our plants in Ballabgarh,
                 Faridabad, and Sanand. Our focus areas are rural education, preventative health, water conservation,
                 and vocational training, chosen because they are the things our neighbours actually ask for.
               </p>
-              <div className="grid grid-cols-2 gap-4 pt-2">
+              <div className="esgc-stats-grid">
                 <div className="esg-card esg-card-static">
-                  <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Communities Reached</span>
-                  <span className="text-2xl font-extrabold mt-2" style={{ color: 'var(--primary-red)' }}>120,000+</span>
-                  <span className="text-xs text-slate-500 mt-1">across our village programmes to date</span>
+                  <span className="esgc-stat-label">Communities Reached</span>
+                  <span className="esgc-stat-value esgc-stat-value-red">120,000+</span>
+                  <span className="esgc-stat-sub">across our village programmes to date</span>
                 </div>
                 <div className="esg-card esg-card-static">
-                  <span className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Villages Adopted</span>
-                  <span className="text-2xl font-extrabold text-slate-900 mt-2">48</span>
-                  <span className="text-xs text-slate-500 mt-1">under multi-year development plans</span>
+                  <span className="esgc-stat-label">Villages Adopted</span>
+                  <span className="esgc-stat-value">48</span>
+                  <span className="esgc-stat-sub">under multi-year development plans</span>
                 </div>
               </div>
-              <div className="pt-2">
+              <div className="esgc-cta-wrap">
                 <RedPillCTA href="#national" label="Know More" />
               </div>
             </div>
 
-            <div className="lg:col-span-6" data-reveal="right">
-              <div className="relative w-full h-[420px] rounded-2xl overflow-hidden border border-slate-200 group">
+            <div className="esgc-two-col-right" data-reveal="right">
+              <div className="esgc-feature-img-wrap">
                 <img
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="esgc-feature-img"
                   alt="Indian school children sitting attentively in uniform inside a modern renovated bright rural classroom"
                   src="https://placehold.co/600x400"
                 />
-                <div className="absolute bottom-4 left-4 right-4 bg-slate-900/90 p-5 rounded-xl text-white border border-slate-700">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--primary-red)' }}></span>
-                    <span className="text-xs font-bold uppercase tracking-wider" style={{ color: 'var(--primary-red)' }}>
+                <div className="esgc-feature-overlay">
+                  <div className="esgc-feature-overlay-top">
+                    <span className="esgc-dot-red"></span>
+                    <span className="esgc-feature-overlay-label">
                       Flagship Project: Vidya Jyoti
                     </span>
                   </div>
-                  <p className="text-xs text-slate-300 mt-1.5 leading-relaxed">
+                  <p className="esgc-feature-overlay-text">
                     Upgrading rural school infrastructure — science labs, clean sanitation, and basic computer literacy.
                   </p>
                 </div>
@@ -479,12 +432,11 @@ export default function ESGComponent() {
           </div>
 
           {/* Part B: Commitment to Environment */}
-          <div className="flex flex-col gap-8 pt-6 border-t border-slate-200">
+          <div className="esgc-part-b">
             <div>
               <Eyebrow data-reveal="left">Ecological Stewardship</Eyebrow>
               <h2
-                className="overview-heading"
-                style={{ marginBottom: 0, marginTop: '0.25rem' }}
+                className="overview-heading esgc-heading-flush-top"
                 data-reveal="left"
                 data-reveal-delay="1"
               >
@@ -496,13 +448,13 @@ export default function ESGComponent() {
               <Slider {...envSliderSettings}>
                 {csrEnvironmentCards.map(({ image, title, text }) => (
                   <div key={title}>
-                    <div className="flex flex-col items-center text-center gap-4 px-4">
-                      <div className="w-48 h-48 rounded-full overflow-hidden shrink-0">
-                        <img src={image} alt={title} className="w-full h-full object-cover" />
+                    <div className="esgc-env-card">
+                      <div className="esgc-env-img-wrap">
+                        <img src={image} alt={title} className="esgc-env-img" />
                       </div>
                       <div>
-                        <h4 className="text-base font-bold text-slate-900 mb-1.5">{title}</h4>
-                        <p className="text-xs text-slate-600 leading-relaxed">{text}</p>
+                        <h4 className="esgc-card-title">{title}</h4>
+                        <p className="esgc-card-text">{text}</p>
                       </div>
                     </div>
                   </div>
@@ -514,71 +466,70 @@ export default function ESGComponent() {
       </section>
 
       {/* SECTION 3: National Presence & Testimonials */}
-      <section className="w-full py-16 lg:py-20 bg-white" id="national">
-        <div className="container-global flex flex-col gap-16">
+      <section className="esgc-section" id="national">
+        <div className="container-global esgc-container-gap-lg">
           {/* National Presence */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-              <div className="lg:col-span-5 flex flex-col gap-5">
+          <div className="esgc-two-col-grid">
+              <div className="esgc-national-left">
                 <Eyebrow data-reveal="left">Our Presence</Eyebrow>
                 <h2
-                  className="overview-heading"
-                  style={{ marginBottom: 0 }}
+                  className="overview-heading esgc-heading-flush"
                   data-reveal="left"
                   data-reveal-delay="1"
                 >
                   National <span className="overview-heading-red">Presence</span>
                 </h2>
-                <p className="overview-text" style={{ fontSize: '14px' }} data-reveal="left" data-reveal-delay="2">
+                <p className="overview-text" data-reveal="left" data-reveal-delay="2">
                   Our CSR field centres sit close to our manufacturing corridors, so the teams running them work
                   directly with district authorities and local panchayats rather than through intermediaries.
                 </p>
                 <div className="esg-card esg-card-row">
                   <IconBadge Icon={MapPin} />
                   <div>
-                    <div className="text-xl font-extrabold text-slate-900">18 Centres</div>
-                    <div className="text-xs text-slate-500 font-medium">Across North, West, and South manufacturing hubs</div>
+                    <div className="esgc-inline-stat-value">18 Centres</div>
+                    <div className="esgc-inline-stat-sub">Across North, West, and South manufacturing hubs</div>
                   </div>
                 </div>
-                <div className="grid grid-cols-2 gap-3 text-xs text-slate-700 font-medium">
-                  <div className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: 'var(--primary-red)' }}></span>
+                <div className="esgc-legend-grid">
+                  <div className="esgc-legend-item">
+                    <span className="esgc-dot-red-sm"></span>
                     <span>Faridabad NCR (8 Centres)</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: 'var(--primary-red)' }}></span>
+                  <div className="esgc-legend-item">
+                    <span className="esgc-dot-red-sm"></span>
                     <span>Sanand, Gujarat (3 Centres)</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: 'var(--primary-red)' }}></span>
+                  <div className="esgc-legend-item">
+                    <span className="esgc-dot-red-sm"></span>
                     <span>Pune Cluster (4 Centres)</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: 'var(--primary-red)' }}></span>
+                  <div className="esgc-legend-item">
+                    <span className="esgc-dot-red-sm"></span>
                     <span>Chennai &amp; Bengaluru (3 Centres)</span>
                   </div>
                 </div>
               </div>
 
-              <div className="lg:col-span-7 flex flex-col items-center justify-center" data-reveal="right">
-                <div className="w-full flex items-center justify-between pb-4 border-b border-slate-100">
-                  <span className="text-xs text-slate-400 font-semibold uppercase tracking-wider">
+              <div className="esgc-national-right" data-reveal="right">
+                <div className="esgc-map-legend-bar">
+                  <span className="esgc-map-legend-title">
                     Pan-India footprint
                   </span>
-                  <div className="flex items-center gap-4 text-xs">
-                    <span className="inline-flex items-center gap-1.5 text-slate-800 font-medium">
-                      <span className="w-2 h-2 rounded-full bg-slate-900"></span> Manufacturing Hub
+                  <div className="esgc-map-legend-items">
+                    <span className="esgc-map-legend-item">
+                      <span className="esgc-dot-dark"></span> Manufacturing Hub
                     </span>
-                    <span className="inline-flex items-center gap-1.5 font-medium" style={{ color: 'var(--primary-red)' }}>
-                      <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--primary-red)' }}></span> CSR Outreach
+                    <span className="esgc-map-legend-item esgc-map-legend-item-red">
+                      <span className="esgc-dot-red"></span> CSR Outreach
                     </span>
                   </div>
                 </div>
 
-                <div className="w-full max-w-md py-6 flex items-center justify-center relative">
+                <div className="esgc-map-wrap">
                   <img
                     src="/india-map.png"
                     alt="Map of India - National Presence"
-                    className="w-full h-auto max-h-[360px] object-contain"
+                    className="esgc-map-img"
                   />
                 </div>
               </div>
@@ -588,28 +539,27 @@ export default function ESGComponent() {
       </section>
 
       {/* SECTION 4: CSR Focus Areas & Policy */}
-      <section className="w-full py-16 lg:py-20 bg-slate-50 border-y border-outline-border" id="policy">
-        <div id="csr-policy" className="container-global flex flex-col gap-16">
+      <section className="esgc-section esgc-section-alt" id="policy">
+        <div id="csr-policy" className="container-global esgc-container-gap-lg">
           {/* Focus Areas */}
-          <div className="flex flex-col gap-8">
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
+          <div className="esgc-focus-wrap">
+            <div className="esgc-focus-header">
               <div>
                 <Eyebrow data-reveal="left">Thematic Interventions</Eyebrow>
                 <h2
-                  className="overview-heading"
-                  style={{ marginBottom: 0, marginTop: '0.25rem' }}
+                  className="overview-heading esgc-heading-flush-top"
                   data-reveal="left"
                   data-reveal-delay="1"
                 >
                   Our CSR <span className="overview-heading-red">Focus Areas</span>
                 </h2>
               </div>
-              <p className="text-xs sm:text-sm text-slate-500 max-w-md" data-reveal="right">
+              <p className="esgc-focus-desc" data-reveal="right">
                 Chosen in line with Schedule VII of the Companies Act, 2013, and reviewed for real, lasting impact
                 rather than one-off activity.
               </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="esgc-pillars-grid">
               {csrPillars.map(({ label, title, text }, idx) => (
                 <div
                   key={label}
@@ -617,77 +567,62 @@ export default function ESGComponent() {
                   data-reveal="scale"
                   data-reveal-delay={String((idx % 4) + 1)}
                 >
-                  <span className="text-[11px] font-bold tracking-wider font-mono" style={{ color: 'var(--primary-red)' }}>
+                  <span className="esgc-pillar-label">
                     {label}
                   </span>
-                  <h4 className="text-base font-bold text-slate-900">{title}</h4>
-                  <p className="text-xs text-slate-600 leading-relaxed">{text}</p>
+                  <h4 className="esgc-card-title-flush">{title}</h4>
+                  <p className="esgc-card-text">{text}</p>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Policy Objectives Split */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-            <div
-              className="lg:col-span-7 bg-white rounded-2xl p-6 lg:p-8 border border-slate-200 flex flex-col justify-between"
-              data-reveal="left"
-            >
-              <div className="flex flex-col gap-3">
+          <div className="esgc-policy-grid">
+            <div className="esgc-policy-card" data-reveal="left">
+              <div className="esgc-policy-card-top">
                 <Eyebrow>Statutory Mandate</Eyebrow>
-                <h3 className="text-2xl font-extrabold text-slate-900">Policy Objectives</h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <h3 className="esgc-policy-title">Policy Objectives</h3>
+                <p className="esgc-policy-desc">
                   Framed under Section 135 of the Companies Act, 2013. In plain terms: spend transparently, measure
                   the outcomes, and keep an audit trail we&apos;d be comfortable sharing.
                 </p>
               </div>
-              <div className="flex flex-col gap-3 my-6">
+              <div className="esgc-clauses-wrap">
                 {policyClauses.map((clause) => (
-                  <div key={clause.num} className="p-4 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-4">
-                    <span className="text-lg font-black font-mono shrink-0" style={{ color: 'var(--primary-red)' }}>
+                  <div key={clause.num} className="esgc-clause-item">
+                    <span className="esgc-clause-num">
                       {clause.num}
                     </span>
                     <div>
-                      <h4 className="text-sm font-bold text-slate-900">{clause.title}</h4>
-                      <p className="text-xs text-slate-600 mt-0.5">{clause.text}</p>
+                      <h4 className="esgc-clause-title">{clause.title}</h4>
+                      <p className="esgc-clause-text">{clause.text}</p>
                     </div>
                   </div>
                 ))}
               </div>
-              <div className="flex items-center gap-2 text-xs text-slate-500 font-medium">
-                <ShieldCheck size={16} style={{ color: 'var(--primary-red)' }} />
+              <div className="esgc-policy-footer">
+                <ShieldCheck size={16} className="esgc-icon-red" />
                 <span>Reviewed and approved by the Board&apos;s CSR Committee</span>
               </div>
             </div>
 
             {/* Dark Spotlight Card */}
-            <div
-              className="lg:col-span-5 relative rounded-2xl overflow-hidden border border-slate-800 flex flex-col justify-end p-7 text-white bg-surface-dark min-h-[380px]"
-              data-reveal="right"
-            >
-              <div
-                className="absolute inset-0 bg-cover bg-center opacity-25"
-                style={{
-                  backgroundImage:
-                    "url('https://placehold.co/600x400')",
-                }}
-              ></div>
-              <div className="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/85 to-transparent"></div>
-              <div className="relative z-10 flex flex-col gap-4">
-                <span
-                  className="px-3 py-1 rounded-full text-white text-xs font-bold w-fit"
-                  style={{ backgroundColor: 'var(--primary-red)' }}
-                >
+            <div className="esgc-dark-card" data-reveal="right">
+              <div className="esgc-dark-card-bg"></div>
+              <div className="esgc-dark-card-gradient"></div>
+              <div className="esgc-dark-card-content">
+                <span className="esgc-pill-red">
                   Integrated Responsibility
                 </span>
-                <h3 className="text-2xl font-extrabold text-white">
+                <h3 className="esgc-dark-card-title">
                   Building stronger communities together
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                <p className="esgc-dark-card-text">
                   We measure ourselves on manufacturing quality first, but we also want the towns that host our
                   plants to be better off for it.
                 </p>
-                <div className="pt-2">
+                <div className="esgc-cta-wrap">
                   <RedPillCTA href="#governance-report" label="View CSR Policy" />
                 </div>
               </div>
@@ -695,19 +630,19 @@ export default function ESGComponent() {
           </div>
 
           {/* Monitoring, Measurement & Transparency */}
-          <div id="supp-sustainability" className="flex flex-col gap-6 pt-4 border-t border-slate-200">
-            <div className="text-center max-w-2xl mx-auto flex flex-col gap-2">
-              <div className="flex items-center justify-center">
+          <div id="supp-sustainability" className="esgc-monitoring-wrap">
+            <div className="esgc-monitoring-header">
+              <div className="esgc-center-row">
                 <Eyebrow data-reveal>Governance Framework</Eyebrow>
               </div>
-              <h3 className="text-2xl font-extrabold text-slate-900" data-reveal data-reveal-delay="1">
+              <h3 className="esgc-monitoring-title" data-reveal data-reveal-delay="1">
                 Monitoring &amp; Transparency
               </h3>
-              <p className="text-xs sm:text-sm text-slate-500" data-reveal data-reveal-delay="2">
+              <p className="esgc-monitoring-desc" data-reveal data-reveal-delay="2">
                 How we keep ourselves honest about whether our CSR programmes are actually working.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="esgc-monitoring-grid">
               {monitoringCards.map(({ Icon, title, text }, idx) => (
                 <div
                   key={title}
@@ -716,8 +651,8 @@ export default function ESGComponent() {
                   data-reveal-delay={String((idx % 4) + 1)}
                 >
                   <IconBadge Icon={Icon} />
-                  <h4 className="text-base font-bold text-slate-900">{title}</h4>
-                  <p className="text-xs text-slate-600 leading-relaxed">{text}</p>
+                  <h4 className="esgc-card-title-flush">{title}</h4>
+                  <p className="esgc-card-text">{text}</p>
                 </div>
               ))}
             </div>
@@ -726,60 +661,52 @@ export default function ESGComponent() {
       </section>
 
       {/* SECTION 5: Case Studies */}
-      <section className="w-full py-16 lg:py-20 bg-white" id="stories">
-        <div className="container-global flex flex-col gap-10">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-            <div className="max-w-2xl flex flex-col gap-2">
+      <section className="esgc-section" id="stories">
+        <div className="container-global esgc-container-gap-lg">
+          <div className="esgc-stories-header">
+            <div className="esgc-stories-header-copy">
               <Eyebrow data-reveal="left">Field Notes</Eyebrow>
               <h2
-                className="overview-heading"
-                style={{ marginBottom: 0, marginTop: '0.25rem' }}
+                className="overview-heading esgc-heading-flush-top"
                 data-reveal="left"
                 data-reveal-delay="1"
               >
                 Stories behind our <span className="overview-heading-red">ESG work</span>
               </h2>
-              <p className="overview-text" style={{ fontSize: '14px' }} data-reveal="left" data-reveal-delay="2">
+              <p className="overview-text" data-reveal="left" data-reveal-delay="2">
                 A few longer reads on how our sustainability and community work actually happens on the ground.
               </p>
             </div>
-            <a
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-900 text-xs font-semibold transition-colors shrink-0"
-              href="#"
-            >
+            <a className="esgc-btn-ghost" href="#">
               <span>View All Stories</span>
               <ArrowRight size={14} />
             </a>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="esgc-stories-grid">
             {caseStudies.map((story, idx) => (
               <article
                 key={story.title}
-                className="esg-story-card bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm flex flex-col group"
+                className="esg-story-card esgc-story-card"
                 data-reveal="scale"
                 data-reveal-delay={String((idx % 4) + 1)}
               >
-                <div className="h-52 w-full overflow-hidden relative">
+                <div className="esgc-story-img-wrap">
                   <img
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="esgc-story-img"
                     alt={story.title}
                     src={story.img}
                   />
-                  <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-900/90 text-white text-[11px] font-bold">
+                  <span className="esgc-story-tag">
                     {story.tag}
                   </span>
                 </div>
-                <div className="p-6 flex flex-col flex-1 justify-between gap-5">
-                  <div className="flex flex-col gap-2">
-                    <span className="text-xs text-slate-400 font-mono">{story.date}</span>
-                    <h3 className="text-lg font-bold text-slate-900 leading-snug">{story.title}</h3>
-                    <p className="text-xs text-slate-600 leading-relaxed">{story.text}</p>
+                <div className="esgc-story-body">
+                  <div className="esgc-story-body-top">
+                    <span className="esgc-story-date">{story.date}</span>
+                    <h3 className="esgc-story-title">{story.title}</h3>
+                    <p className="esgc-card-text">{story.text}</p>
                   </div>
-                  <a
-                    className="inline-flex items-center gap-1.5 text-xs font-bold transition-colors"
-                    style={{ color: 'var(--primary-red)' }}
-                    href="#"
-                  >
+                  <a className="esgc-story-link" href="#">
                     <span>Read Full Story</span>
                     <ArrowRight size={14} />
                   </a>
@@ -791,61 +718,44 @@ export default function ESGComponent() {
       </section>
 
       {/* SECTION 6: Closing CTA */}
-      <section className="w-full bg-surface-dark text-white py-16 lg:py-20 border-t border-slate-800" id="governance-report">
-        <div className="container-global flex flex-col lg:flex-row items-center justify-between gap-12">
-          <div className="flex flex-col gap-4 max-w-2xl">
-            <div
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase w-fit border"
-              style={{ backgroundColor: 'rgba(201,24,35,0.15)', color: 'var(--primary-red)', borderColor: 'rgba(201,24,35,0.3)' }}
-              data-reveal="left"
-            >
+      <section className="esgc-cta-section" id="governance-report">
+        <div className="container-global esgc-cta-inner">
+          <div className="esgc-cta-copy">
+            <div className="esgc-cta-badge" data-reveal="left">
               <ShieldCheck size={14} />
               Audited under Section 135 of the Companies Act, 2013
             </div>
             <h2
-              className="text-3xl lg:text-4xl font-extrabold text-white tracking-tight"
+              className="esgc-cta-title"
               data-reveal="left"
               data-reveal-delay="1"
             >
               Read more about our CSR and ESG work
             </h2>
             <p
-              className="text-slate-300 text-sm sm:text-base leading-relaxed"
+              className="esgc-cta-desc"
               data-reveal="left"
               data-reveal-delay="2"
             >
               Our annual CSR filings, impact assessments, and committee disclosures are available if you&apos;d like
               to look at the detail behind what&apos;s on this page.
             </p>
-            <div className="flex flex-wrap items-center gap-3 pt-2 text-slate-400 text-xs font-mono">
+            <div className="esgc-cta-meta">
               <span>CIN: U25209HR1995PTC032840</span>
               <span>•</span>
               <span>IATF 16949 Audited</span>
             </div>
           </div>
-          <div
-            className="flex flex-col sm:flex-row lg:flex-col gap-3.5 shrink-0 w-full sm:w-auto"
-            data-reveal="right"
-          >
-            <a
-              className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full text-white text-sm font-semibold tracking-wide transition-colors"
-              style={{ backgroundColor: 'var(--primary-red)' }}
-              href="#"
-            >
+          <div className="esgc-cta-actions" data-reveal="right">
+            <a className="esgc-btn-solid-red" href="#">
               <Download size={16} />
               <span>Download 2024 ESG Report</span>
             </a>
-            <a
-              className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-white hover:bg-slate-100 text-slate-900 text-sm font-semibold tracking-wide transition-colors"
-              href="#"
-            >
+            <a className="esgc-btn-solid-white" href="#">
               <FileText size={16} />
               <span>Statutory CSR Policy Document</span>
             </a>
-            <a
-              className="inline-flex items-center justify-center gap-2 px-6 py-2 text-slate-300 hover:text-white text-xs font-medium transition-colors"
-              href="#contact"
-            >
+            <a className="esgc-btn-text" href="#contact">
               <span>Partner with us / contact the CSR team</span>
               <ChevronRight size={14} />
             </a>
