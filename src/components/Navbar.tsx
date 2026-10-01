@@ -63,7 +63,7 @@ export default function Navbar() {
             </div>
 
             <a href="#capabilities" className="navbar-nav-item">Capabilities</a>
-            <a href="#products" className="navbar-nav-item">Products</a>
+            <a href="/products" className="navbar-nav-item">Products</a>
             <a href="/contact" className="navbar-nav-item">Contact Us</a>
           </nav>
 
@@ -90,7 +90,7 @@ export default function Navbar() {
           <a href="#about" className="navbar-mobile-link">About Us</a>
           <a href="#sustainability" className="navbar-mobile-link">Sustainability</a>
           <a href="#capabilities" className="navbar-mobile-link">Capabilities</a>
-          <a href="#products" className="navbar-mobile-link">Products</a>
+          <a href="/products" className="navbar-mobile-link">Products</a>
           <a href="/contact" className="navbar-mobile-link">Contact Us</a>
         </div>
       )}

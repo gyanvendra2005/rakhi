@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"error":"#ba1a1a","secondary-fixed":"#ffdad6","surface-container-high":"#dce9ff","on-primary-container":"#7b8497","border-grid":"#E2E8F0","inverse-on-surface":"#eaf1ff","secondary-fixed-dim":"#ffb3ad","on-tertiary-container":"#988063","primary-container":"#131c2b","inverse-primary":"#bec7db","surface-muted":"#F1F5F9","on-primary-fixed-variant":"#3e4758","background":"#f8f9ff","surface-container-lowest":"#ffffff","surface-canvas":"#FFFFFF","tertiary-fixed-dim":"#dec2a1","on-secondary-fixed-variant":"#930012","on-secondary":"#ffffff","on-secondary-fixed":"#410003","on-tertiary-fixed":"#271904","on-background":"#0b1c30","secondary-container":"#db3234","brand-navy-dark":"#0B0F19","surface":"#f8f9ff","surface-variant":"#d3e4fe","outline":"#75777d","on-error":"#ffffff","on-primary":"#ffffff","on-tertiary":"#ffffff","on-tertiary-fixed-variant":"#57432a","primary-fixed-dim":"#bec7db","outline-variant":"#c5c6cd","primary-fixed":"#dae2f8","tertiary-fixed":"#fbdebc","inverse-surface":"#213145","surface-container":"#e5eeff","secondary":"#b7131f","tertiary-container":"#271904","on-primary-fixed":"#131c2b","on-surface":"#0b1c30","primary":"#000000","tertiary":"#000000","on-error-container":"#93000a","brand-crimson-hover":"#981019","error-container":"#ffdad6","surface-container-highest":"#d3e4fe","surface-container-low":"#eff4ff","surface-bright":"#f8f9ff","surface-dim":"#cbdbf5","surface-subtle":"#F8FAFC","surface-tint":"#565f70","on-surface-variant":"#45474c","on-secondary-container":"#fffbff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","space-xl":"2.5rem","space-xs":"0.25rem","space-md":"1rem","space-sm":"0.5rem","margin-mobile":"1.25rem","gutter":"1.5rem","margin":"3rem","gutter-mobile":"1rem"},fontFamily:{"body-sm":["Hanken Grotesk"],"label-md":["Hanken Grotesk"],"label-lg":["Hanken Grotesk"],"display":["Hanken Grotesk"],"display-mobile":["Hanken Grotesk"],"label-sm":["Hanken Grotesk"],"title-md":["Hanken Grotesk"],"body-lg":["Hanken Grotesk"],"headline-sm":["Hanken Grotesk"],"headline-lg":["Hanken Grotesk"],"body-md":["Hanken Grotesk"],"headline-lg-mobile":["Hanken Grotesk"],"headline-md":["Hanken Grotesk"]},fontSize:{"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.005em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"display":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"700"}],"display-mobile":["38px",{"lineHeight":"46px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"700"}],"title-md":["18px",{"lineHeight":"26px","letterSpacing":"-0.005em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["22px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.025em","fontWeight":"700"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-6"><div class="flex items-center gap-4 shrink-0"><img alt="Image from https://rikki-rho.vercel.app/logo2.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X5L0SbivdyFKxnZTHNZoE_o0V2-g_k-QGEmkB_lSisoLtLyOqGSkMv1jggnQeDX2OnPHkE2yUHLJd8yrfvm5b2kZ9ed9uxAh6WkRH--_dIE2Y5qQm7dcbJmyqdKKFa3Gml4IzJ7DPgtB0U_vaJ7Fn_eIigaU8AwhPkkZaFYAXpdBIOZZbfWn8a7ViNKDF1i-k2BMtaCX-oHseQIC_xpWerQgJIqJVyPqeKU8FjiXcVtYxR-C0snpN3Cg"/><span class="font-title-md text-title-md text-on-surface uppercase tracking-tight">Rikki Plastic</span></div><nav class="hidden xl:flex items-center gap-8 h-full" data-active-classes="text-secondary font-semibold border-b-2 border-secondary"><a class="text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors py-2" data-path="about-us" href="#">About Us</a><a class="text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors py-2" data-path="capabilities" href="#">Capabilities</a><a aria-current="page" class="transition-colors py-2 text-secondary font-semibold border-b-2 border-secondary" data-path="products" href="#">Products</a><a class="text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors py-2" data-path="sustainability-esg" href="#">Sustainability &amp; ESG</a><a class="text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors py-2" data-path="contact-us" href="#">Contact Us</a></nav><div class="flex items-center gap-4 shrink-0"><div class="hidden sm:flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">language</span><span>EN</span></div><button aria-label="Search" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><a class="hidden sm:inline-flex items-center gap-2 bg-primary-container text-on-primary pl-5 pr-2 py-2 rounded-full font-label-md text-label-md transition-all hover:bg-on-background" data-path="request-a-quote" href="#"><span>Request a Quote</span><span class="w-7 h-7 rounded-full bg-secondary flex items-center justify-center text-on-secondary"><span class="material-symbols-outlined text-[16px]">arrow_forward</span></span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Breadcrumb & Quick Actions Bar -->
+<section class="w-full bg-surface-muted/60 py-3.5">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-wrap items-center justify-between gap-4">
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 font-label-md text-label-md text-on-surface-variant">
+<a class="hover:text-secondary transition-colors" data-path="home" href="#">Home</a>
+<span class="text-outline-variant text-[14px]">/</span>
+<a class="hover:text-secondary transition-colors" data-path="products" href="#">Products</a>
+<span class="text-outline-variant text-[14px]">/</span>
+<a class="hover:text-secondary transition-colors" data-path="products" href="#">Powertrain &amp; Drive Systems</a>
+<span class="text-outline-variant text-[14px]">/</span>
+<span class="text-on-surface font-semibold truncate max-w-xs sm:max-w-none">High-Torque Helical &amp; Planetary Gears</span>
+</nav>
+<div class="flex items-center gap-3">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface shadow-sm font-label-sm text-label-sm text-secondary font-bold">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+          OEM TIER-1 VALIDATED
+        </span>
+<div class="hidden sm:flex items-center gap-2 text-on-surface-variant font-label-sm text-label-sm">
+<span>REV: 04.C</span>
+<span class="text-outline-variant">•</span>
+<span>IMDS ID: #8849201</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Hero Section -->
+<section class="w-full py-10 lg:py-14 bg-surface">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 xl:gap-14 items-start">
+<!-- Left Column: Visual Gallery & CAD Visualizer Preview -->
+<div class="lg:col-span-6 flex flex-col gap-5">
+<!-- Primary Visual Viewer Card -->
+<div class="relative w-full rounded-xl bg-surface-canvas shadow-sm overflow-hidden group">
+<!-- Top Controls Overlay -->
+<div class="absolute top-4 left-4 right-4 z-20 flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container/85 backdrop-blur-md text-on-primary font-label-sm text-label-sm tracking-wide uppercase">
+<span class="material-symbols-outlined text-[15px] text-secondary">view_in_ar</span>
+                Interactive Model View
+              </span>
+<div class="flex items-center gap-1.5 bg-surface/90 backdrop-blur-md p-1 rounded-full shadow-sm">
+<button aria-label="Toggle Fullscreen" class="w-7 h-7 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[17px]">fullscreen</span>
+</button>
+<button aria-label="Toggle Mesh Layer" class="w-7 h-7 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" title="Toggle CAE Mesh" type="button">
+<span class="material-symbols-outlined text-[17px]">grid_4x4</span>
+</button>
+</div>
+</div>
+<!-- Active Viewport Image Container -->
+<div class="relative w-full h-[380px] sm:h-[460px] bg-gradient-to-b from-surface-subtle via-surface-muted to-surface flex items-center justify-center p-6 overflow-hidden">
+<!-- Technical Engineering Grid Pattern Overlay -->
+<svg class="absolute inset-0 w-full h-full opacity-20 pointer-events-none text-outline" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="32" id="cad-grid" patternunits="userSpaceOnUse" width="32">
+<path d="M 32 0 L 0 0 0 32" fill="none" stroke="currentColor" stroke-width="0.75"></path>
+<circle cx="0" cy="0" fill="currentColor" r="1.5"></circle>
+</pattern>
+</defs>
+<rect fill="url(#cad-grid)" height="100%" width="100%"></rect>
+</svg>
+<!-- Main Hero Product Component Image -->
+<img class="relative z-10 max-h-full max-w-full object-contain filter drop-shadow-[0_15px_25px_rgba(11,28,48,0.18)] transition-transform duration-500 group-hover:scale-105" data-alt="High precision black engineered POM plastic helical and planetary automotive drive gear assembly photographed in crisp macro focus on granite CMM surface table with technical CAD dimensions line overlay, automotive engineering studio lighting, surgical precision, 8k industrial product render." id="main-product-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh9omMU43st0Y5Ymv93tYabraYN3MsEOpfwQrqu6rCfnaA6T9Bfu907QlQMdkm9Q8-ModZmCi3sS3TSZAIcyaZRMKnuZpFxi4Ixw4Rn3lTwScWFNmAlzM1WPJMkaBRP-vsl2MOA0TMA214KPstWRYTStLNxYe0rdw2sNMFiRzk_BWjTJUENTgk9OqSSFBnF7KA_Ha3qJcqzz2S9drfBslfCOGN71VFmTfDqankxJTHCGw59w5RGKIw"/>
+<!-- Floating Metrology Hotspot Badge -->
+<div class="absolute bottom-5 left-5 z-20 flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface/90 backdrop-blur-md shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-wider">Tooth Runout: &lt; 0.006 mm</span>
+</div>
+</div>
+<!-- CAD Download Bottom Strip -->
+<div class="bg-primary-container text-on-primary px-5 py-3.5 flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2 font-label-md text-label-md">
+<span class="material-symbols-outlined text-[20px] text-secondary">data_object</span>
+<span>Engineering CAD Vault: RP-7420-RevC</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface/15 hover:bg-surface/25 text-surface font-label-sm text-label-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[15px]">download</span>
+                  .STEP (14.2 MB)
+                </button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface/15 hover:bg-surface/25 text-surface font-label-sm text-label-sm transition-all" type="button">
+<span class="material-symbols-outlined text-[15px]">download</span>
+                  .IGES
+                </button>
+</div>
+</div>
+</div>
+<!-- Thumbnail Gallery Switcher -->
+<div class="grid grid-cols-4 gap-3">
+<button class="thumb-btn active-thumb relative rounded-lg p-2 bg-surface-canvas shadow-sm text-left transition-all hover:bg-surface-subtle focus:outline-none" onclick="selectThumb(0)" type="button">
+<div class="h-16 w-full rounded overflow-hidden bg-surface-muted flex items-center justify-center">
+<img class="h-full w-full object-cover" data-alt="Macro perspective view of high torque helical gear tooth flanks showing micro-crowning profile and precision lead finish in high durability PEEK material, industrial product photo." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnsoe_UdD146SoyhvTeeFa5yYrYFed1uMzBq7OrRGH_iUmwPgrWBbSPn064UEigPRyyRBPTSvb1HN4PsGIOHUxJwe3IiVDXuiR4o0sG5kjEBgW_DFMYQFdsxeqG6C6twTkAHulvtOfeVBHOBCKtX0XYQIKv5L-nSeAOfaZvcCZuWxK5u1uOufV9E8YWVbYPotXJ0ANu9d98mV0eN9YKepIKzEM4fIbQoc_65-T8eS0XGBgT2qfl5_V"/>
+</div>
+<p class="mt-1.5 font-label-sm text-label-sm text-on-surface truncate">Full Assembly</p>
+</button>
+<button class="thumb-btn relative rounded-lg p-2 bg-surface-canvas shadow-sm text-left transition-all hover:bg-surface-subtle focus:outline-none opacity-70 hover:opacity-100" onclick="selectThumb(1)" type="button">
+<div class="h-16 w-full rounded overflow-hidden bg-surface-muted flex items-center justify-center">
+<img class="h-full w-full object-cover" data-alt="Cutaway cross section perspective view of automotive planetary gear showing integrated sun gear, brass hub insert, and internal helical splines with dimension callouts." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa6C_eDQ57VN_o0ubi8-tDc1DIoQhpCvCwZ5O1-dU6-qxsommSa9GcT56iuWCCWL_1KI42Wqw0lDoY2sPZWrCQYB6G3MeHc8csFBMtrvarSapKIPYexZMX37CyIlUA27xJvfCZq6FN8jTdKrEyNcIuqo1pPEWbycQkrNCPxXcVFzXV4xYfbPYSRCC91aModk8D40nfZ74S10d9wQdjkniccHikQB1Vh1oh0aIo2IE0ycedTQETKOWE"/>
+</div>
+<p class="mt-1.5 font-label-sm text-label-sm text-on-surface truncate">Cross Section</p>
+</button>
+<button class="thumb-btn relative rounded-lg p-2 bg-surface-canvas shadow-sm text-left transition-all hover:bg-surface-subtle focus:outline-none opacity-70 hover:opacity-100" onclick="selectThumb(2)" type="button">
+<div class="h-16 w-full rounded overflow-hidden bg-surface-muted flex items-center justify-center">
+<img class="h-full w-full object-cover" data-alt="CAE Autodesk Moldflow simulation heatmap visual showing fiber orientation and stress distribution vectors for multi-cavity precision gear injection molding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrrdV3SfTSghpcmd7_Eo-6Xe65vLluzXsUcTWQd8FZ0_fkk44n_898scOgiPBt2YpvOIm_O3SPXJ0c4EqgMwBVWf71NbxE0bbq2kz_U0CV1noZD04pGwli9bQoO5FKeh_WxiDz_pR3rnIMMcwY98HODyc_bOvRv3vaZTFXh298KK-ApLN8MLtEbnTVn3sXdYfLlyaNuKWEn8UIESb0C2vN5pdaKmQhnSQ4UDPOufpGdW-Oc7A84fVX"/>
+</div>
+<p class="mt-1.5 font-label-sm text-label-sm text-on-surface truncate">Moldflow Analysis</p>
+</button>
+<button class="thumb-btn relative rounded-lg p-2 bg-surface-canvas shadow-sm text-left transition-all hover:bg-surface-subtle focus:outline-none opacity-70 hover:opacity-100" onclick="selectThumb(3)" type="button">
+<div class="h-16 w-full rounded overflow-hidden bg-surface-muted flex items-center justify-center">
+<img class="h-full w-full object-cover" data-alt="Automotive injection molded helical gear component resting on 3D coordinate measuring machine CMM ruby stylus probe table with verified test calibration graph in background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpxbxjyHhI0xFrL7mZ0jdgdgYHxvVb4lQtJQCeG0D06S-ATppnjEBwymA0Foijav_bWR2qkRnZBIDLoaAp47fM6wjSEGXW4BgMeFCEU8WXgldSYxHXxF9g4VVS_iehkj9nzXzB-8-sXGHdFuprIDkruHCAqV7rOdRGDhtzjbI68yWlwHLmDs-umC6cCxN5ROnVVDHc9K2Kfo5E7rStytuYpEM16EwjfFsgzECV30fMHffPxFieXDv3"/>
+</div>
+<p class="mt-1.5 font-label-sm text-label-sm text-on-surface truncate">CMM Lab Sample</p>
+</button>
+</div>
+</div>
+<!-- Right Column: Product Specs, Value Prop & Key Actions -->
+<div class="lg:col-span-6 flex flex-col gap-6">
+<!-- Part Meta Header -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between gap-3">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-muted text-on-surface font-label-sm text-label-sm uppercase tracking-widest">
+                Part No: <strong class="text-on-surface">RP-DRV-7420</strong>
+</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                PPAP Level 3 Qualified
+              </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface leading-tight tracking-tight">
+              High-Torque Precision Helical &amp; Planetary Drive Gear
+            </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Engineered for next-generation automotive electric actuators, electronic throttle bodies (ETB), electronic power steering (EPS), and steer-by-wire subsystems requiring zero backlash and ultra-quiet mechanical efficiency.
+            </p>
+</div>
+<!-- Feature Pills Grid -->
+<div class="flex flex-wrap gap-2 pt-1">
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">precision_manufacturing</span>
+              DIN 3962 Class 5 Precision
+            </div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">science</span>
+              POM-H + PTFE Tribo-Blend
+            </div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">volume_off</span>
+              NVH Acoustic Profile &lt;32 dB(A)
+            </div>
+<div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">thermostat</span>
+              -40°C to +130°C Operating
+            </div>
+</div>
+<!-- Primary Actions (Pill with crimson end badge) -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+<a class="inline-flex items-center justify-between gap-4 bg-primary-container text-on-primary pl-6 pr-2.5 py-3 rounded-full font-label-md text-label-md transition-all hover:bg-on-background shadow-sm group" href="#rfq-section">
+<span>Request Part RFQ &amp; Sample Kit</span>
+<span class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-on-secondary transition-transform group-hover:translate-x-1">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</span>
+</a>
+<button class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-surface-muted hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors shadow-sm" onclick="alert('Technical Datasheet RP-DRV-7420 (Rev 4) downloading.')" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">description</span>
+<span>Download TDS Datasheet (PDF)</span>
+</button>
+</div>
+<!-- Rapid Production Spec Matrix -->
+<div class="rounded-xl bg-surface-subtle p-5 shadow-sm mt-2">
+<div class="flex items-center justify-between pb-3 mb-3 border-b border-border-grid">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant font-bold">Standard Tooling &amp; Mold Parameters</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Class 101 SPI Tool Life: 1.5M Shots</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nominal Module</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">0.65 Mn</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pressure Angle</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">20° / Helix 15°</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tool Cavitation</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">8-Cav. Valve Gate</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Press Tonnage</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">120T Fanuc Roboshot</span>
+</div>
+</div>
+</div>
+<!-- Production Readiness Tracker Bar -->
+<div class="rounded-lg bg-surface-canvas p-4 shadow-sm flex items-center justify-between gap-4">
+<div class="flex items-center gap-3">
+<span class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[22px]">speed</span>
+</span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">Rapid Prototype to Mass Production</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Soft tool samples: 12 days | Hard production tooling: 28 days</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm uppercase font-bold text-secondary px-3 py-1 rounded bg-secondary-fixed text-on-secondary-fixed">APQP Gated</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Engineering Deep Dive Tabs -->
+<section class="w-full py-14 bg-surface-subtle">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-8">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<div class="flex items-center gap-2 text-secondary font-label-md text-label-md uppercase tracking-wider font-bold">
+<span class="w-2.5 h-0.5 bg-secondary"></span>
+            Technical Specifications
+          </div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1">
+            Manufacturing, Metrology &amp; Material Data
+          </h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+          Tested and audited in accordance with automotive VDA 6.3, AIAG PPAP 4th Edition, and ISO 1328 cylindrical gear accuracy criteria.
+        </p>
+</div>
+<!-- Tab Buttons -->
+<div class="flex flex-wrap gap-2 p-1.5 rounded-xl bg-surface-canvas shadow-sm" role="tablist">
+<button class="spec-tab-btn active px-5 py-2.5 rounded-lg font-label-md text-label-md transition-all bg-primary-container text-on-primary" onclick="openSpecTab(event, 'tab-mechanical')" type="button">
+          1. Mechanical &amp; Physical Properties
+        </button>
+<button class="spec-tab-btn px-5 py-2.5 rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-muted" onclick="openSpecTab(event, 'tab-tooling')" type="button">
+          2. Tooling &amp; Mold Architecture
+        </button>
+<button class="spec-tab-btn px-5 py-2.5 rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-muted" onclick="openSpecTab(event, 'tab-quality')" type="button">
+          3. Metrology &amp; Quality CMM (CPK ≥ 1.67)
+        </button>
+<button class="spec-tab-btn px-5 py-2.5 rounded-lg font-label-md text-label-md transition-all text-on-surface-variant hover:text-on-surface hover:bg-surface-muted" onclick="openSpecTab(event, 'tab-compliance')" type="button">
+          4. Certifications &amp; IMDS
+        </button>
+</div>
+<!-- Tab 1: Mechanical & Physical Properties -->
+<div class="spec-content block" id="tab-mechanical">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="lg:col-span-8 rounded-xl bg-surface-canvas p-6 shadow-sm">
+<h3 class="font-title-md text-title-md text-on-surface mb-4 flex items-center justify-between">
+<span>Standard Tested Material Properties</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-normal">Spec: ASTM D638 / ISO 527</span>
+</h3>
+<div class="divide-y divide-border-grid">
+<div class="py-3 flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface">Base Polymer Composite</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">Delrin® 500AF / PEEK 450FC30 Option</span>
+</div>
+<div class="py-3 flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface">Tensile Yield Strength (23°C)</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">75.0 MPa (Standard POM) / 135 MPa (PEEK)</span>
+</div>
+<div class="py-3 flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface">Flexural Modulus (ISO 178)</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">3,100 MPa</span>
+</div>
+<div class="py-3 flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface">Izod Notched Impact Strength</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">6.5 kJ/m²</span>
+</div>
+<div class="py-3 flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface">Static Coefficient of Friction (Dry)</span>
+<span class="font-title-md text-title-md text-secondary font-semibold">0.14 μ (Self-Lubricating)</span>
+</div>
+<div class="py-3 flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface">Continuous Working Temperature</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">-40°C to +130°C (+160°C Excursion)</span>
+</div>
+<div class="py-3 flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface">Linear Mold Shrinkage (Flow / Cross)</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold">1.8% / 1.7% (Pre-compensated)</span>
+</div>
+</div>
+</div>
+<!-- Dynamic Stress Chart Card -->
+<div class="lg:col-span-4 rounded-xl bg-surface-canvas p-6 shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md text-on-surface-variant font-bold uppercase tracking-wider">Tooth Root Stress Curve</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">10^7 Cycles</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+                S-N Wöhler fatigue endurance boundary based on 10,000,000 continuous drive cycles under 18.5 Nm stall torque loading.
+              </p>
+<!-- Inline SVG Curve Chart -->
+<div class="w-full h-44 bg-surface-muted rounded-lg p-3 flex flex-col justify-end">
+<svg class="w-full h-full overflow-visible" viewbox="0 0 280 120">
+<!-- Gridlines -->
+<line stroke="#E2E8F0" stroke-dasharray="2 2" stroke-width="1" x1="0" x2="280" y1="20" y2="20"></line>
+<line stroke="#E2E8F0" stroke-dasharray="2 2" stroke-width="1" x1="0" x2="280" y1="60" y2="60"></line>
+<line stroke="#CBD5E1" stroke-width="1.5" x1="0" x2="280" y1="100" y2="100"></line>
+<!-- Conventional POM Curve -->
+<path d="M 10 30 Q 80 65, 270 85" fill="none" stroke="#75777D" stroke-dasharray="4 2" stroke-width="2"></path>
+<!-- Rikki Reinforced POM Curve -->
+<path d="M 10 18 Q 90 32, 270 50" fill="none" stroke="#B7131F" stroke-width="3"></path>
+<circle cx="270" cy="50" fill="#B7131F" r="4"></circle>
+<!-- Labels -->
+<text fill="#B7131F" font-size="10" font-weight="700" x="12" y="14">Rikki High-Torque Compound</text>
+<text fill="#75777D" font-size="9" x="12" y="44">Commercial Generic POM</text>
+</svg>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-border-grid flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span>Fatigue Life Extension:</span>
+<strong class="text-on-surface font-title-md text-title-md text-secondary">+42% Over Standard</strong>
+</div>
+</div>
+</div>
+</div>
+<!-- Tab 2: Tooling & Mold Architecture -->
+<div class="spec-content hidden" id="tab-tooling">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="rounded-xl bg-surface-canvas p-6 shadow-sm flex flex-col gap-3">
+<span class="w-10 h-10 rounded-lg bg-surface-muted flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[24px]">hardware</span>
+</span>
+<h4 class="font-title-md text-title-md text-on-surface">Steel Selection &amp; Hardness</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Core &amp; Cavity inserts crafted from Bohler M333 ISOPLAST / Uddeholm Stavax ESR hardened to 54±1 HRC with DLC (Diamond-Like Carbon) coatings to resist abrasive micro-wear.
+            </p>
+<div class="mt-auto pt-3 border-t border-border-grid font-label-sm text-label-sm text-on-surface-variant">
+              Machined tolerance: ±0.002 mm
+            </div>
+</div>
+<div class="rounded-xl bg-surface-canvas p-6 shadow-sm flex flex-col gap-3">
+<span class="w-10 h-10 rounded-lg bg-surface-muted flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[24px]">heat_pump</span>
+</span>
+<h4 class="font-title-md text-title-md text-on-surface">Hot Runner &amp; Gating</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Mold-Masters 8-drop sequential valve gate system guaranteeing zero vestige and uniform radial fill to prevent tooth pitch distortion and anisotropic shrink warpage.
+            </p>
+<div class="mt-auto pt-3 border-t border-border-grid font-label-sm text-label-sm text-on-surface-variant">
+              Cycle Time: 18.2 seconds
+            </div>
+</div>
+<div class="rounded-xl bg-surface-canvas p-6 shadow-sm flex flex-col gap-3">
+<span class="w-10 h-10 rounded-lg bg-surface-muted flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[24px]">smart_toy</span>
+</span>
+<h4 class="font-title-md text-title-md text-on-surface">Robotic Degating &amp; Vision</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Integrated Fanuc 6-axis clean-room robot with vacuum end-of-arm tooling (EOAT). Instant 100% in-line Keyence vision check for flash, short-shot, and tooth completeness.
+            </p>
+<div class="mt-auto pt-3 border-t border-border-grid font-label-sm text-label-sm text-on-surface-variant">
+              Automated ESD tray packaging
+            </div>
+</div>
+</div>
+</div>
+<!-- Tab 3: Metrology & Quality CMM -->
+<div class="spec-content hidden" id="tab-quality">
+<div class="rounded-xl bg-surface-canvas p-6 shadow-sm">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-7 flex flex-col gap-4">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+                Statistical Process Validation (CPK ≥ 1.67)
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Every tool trial and production lot undergoes gear inspection via our climate-controlled Zeiss Prismo 3D CMM and Klingelnberg Gear Inspection Centers. Gear topography reports are generated for individual tooth pitch variation (fp), total profile error (Fα), and total helix deviation (Fβ).
+              </p>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2">
+<div class="p-3 rounded-lg bg-surface-muted">
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Profile Deviation (Fα)</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">≤ 0.005 mm</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-muted">
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Helix Deviation (Fβ)</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">≤ 0.007 mm</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-muted">
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Radial Runout (Fr)</span>
+<span class="font-title-md text-title-md text-on-surface font-bold">≤ 0.006 mm</span>
+</div>
+</div>
+</div>
+<!-- CMM Metrology Graphic Indicator -->
+<div class="lg:col-span-5 rounded-xl bg-surface-subtle p-5">
+<div class="flex items-center justify-between mb-3">
+<span class="font-label-md text-label-md text-on-surface font-semibold">DIN 3962 Tolerance Grade</span>
+<span class="font-label-sm text-label-sm px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold">Class 5 Certified</span>
+</div>
+<div class="space-y-3 font-body-sm text-body-sm">
+<div>
+<div class="flex justify-between text-on-surface-variant mb-1 font-label-sm text-label-sm">
+<span>Critical Pitch Index CPK</span>
+<span class="text-on-surface font-bold">1.82 (Target ≥ 1.67)</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 88%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-on-surface-variant mb-1 font-label-sm text-label-sm">
+<span>Concentricity to Brass Core</span>
+<span class="text-on-surface font-bold">1.74 (Target ≥ 1.67)</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 82%"></div>
+</div>
+</div>
+<div class="p-3 rounded bg-surface-canvas font-label-sm text-label-sm text-on-surface-variant mt-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">verified</span>
+<span>100% Dual-Flank Roll Master Mesh Verified</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Tab 4: Certifications & IMDS -->
+<div class="spec-content hidden" id="tab-compliance">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="rounded-xl bg-surface-canvas p-5 shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-2">
+<span class="material-symbols-outlined text-[28px] text-secondary">shield</span>
+<h4 class="font-title-md text-title-md text-on-surface">IATF 16949:2016</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Automotive Quality Management System certified production cells in Faridabad and Hosur.</p>
+</div>
+<span class="mt-4 pt-3 border-t border-border-grid font-label-sm text-label-sm text-secondary font-bold">Audited Dec 2024</span>
+</div>
+<div class="rounded-xl bg-surface-canvas p-5 shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-2">
+<span class="material-symbols-outlined text-[28px] text-secondary">inventory_2</span>
+<h4 class="font-title-md text-title-md text-on-surface">IMDS Registered</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Full material disclosure on the International Material Data System under OEM module trees.</p>
+</div>
+<span class="mt-4 pt-3 border-t border-border-grid font-label-sm text-label-sm text-on-surface-variant">IMDS ID: #8849201</span>
+</div>
+<div class="rounded-xl bg-surface-canvas p-5 shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-2">
+<span class="material-symbols-outlined text-[28px] text-secondary">eco</span>
+<h4 class="font-title-md text-title-md text-on-surface">RoHS 3 &amp; REACH</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Compliant with Directive 2011/65/EU and SVHC candidate list free (&lt;0.1% w/w).</p>
+</div>
+<span class="mt-4 pt-3 border-t border-border-grid font-label-sm text-label-sm text-on-surface-variant">Zero Heavy Metals</span>
+</div>
+<div class="rounded-xl bg-surface-canvas p-5 shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-2">
+<span class="material-symbols-outlined text-[28px] text-secondary">assignment_turned_in</span>
+<h4 class="font-title-md text-title-md text-on-surface">AIAG PPAP Level 3</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Complete dossier: DFMEA, PFMEA, Control Plans, Process Capability studies, and PSW ready.</p>
+</div>
+<span class="mt-4 pt-3 border-t border-border-grid font-label-sm text-label-sm text-secondary font-bold">Instant Release</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Engineering Advantages & NVH Benchmarks (3 Asymmetric Cards) -->
+<section class="w-full py-16 bg-surface">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-10">
+<div class="max-w-2xl">
+<div class="flex items-center gap-2 text-secondary font-label-md text-label-md uppercase tracking-wider font-bold">
+<span class="w-2.5 h-0.5 bg-secondary"></span>
+          Engineering Differentiation
+        </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">
+          Designed to Outperform Sintered Metal in Electric Drive Train Systems
+        </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="rounded-xl bg-surface-subtle p-7 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-canvas flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[28px]">graphic_eq</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+              Acoustic NVH Suppression &lt;32 dB(A)
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Proprietary tooth micro-crowning profile damps high-frequency meshing whine characteristic of EV actuators. Provides passenger cabin serenity without requiring external damping rings.
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-border-grid flex items-baseline justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Noise Reduction</span>
+<span class="font-headline-md text-headline-md text-secondary font-bold">-9.4 dB</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="rounded-xl bg-surface-subtle p-7 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-canvas flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[28px]">oil_barrel</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+              Maintenance-Free Self Lubrication
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Evenly dispersed fluoropolymer additives eliminate secondary silicone/synthetic grease application throughout automotive product lifetime (15 years / 250,000 km warranty).
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-border-grid flex items-baseline justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Grease Application</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">0 g (Dry Mesh)</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="rounded-xl bg-surface-subtle p-7 shadow-sm flex flex-col justify-between transition-all hover:shadow-md">
+<div class="flex flex-col gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-canvas flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[28px]">weight</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+              68% Mass Reduction vs Powder Metal
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Replaces heavy sintered steel and powdered metal planetary sets with near-zero rotational inertia, reducing electric actuator response latency from 65ms down to 18ms.
+            </p>
+</div>
+<div class="pt-6 mt-6 border-t border-border-grid flex items-baseline justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">Rotational Inertia</span>
+<span class="font-headline-md text-headline-md text-secondary font-bold">-72% J</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Manufacturing Facility Video / Factory In-Situ Context Banner -->
+<section class="w-full bg-primary-container text-on-primary py-12">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-7 flex flex-col gap-4">
+<span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface/10 text-surface font-label-sm text-label-sm w-fit">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+            Faridabad Cleanroom Cell #4 &amp; Hosur Toolroom
+          </span>
+<h2 class="font-headline-lg text-headline-lg text-surface">
+            Manufactured in IATF 16949 Injection Molding Cells
+          </h2>
+<p class="font-body-md text-body-md text-outline-variant max-w-xl">
+            Our fully automated electric presses feature mold temperature regulators with ±0.5°C tolerance, automated cleanroom part pickers, and integrated de-humidifying resin dryers for stable crystalline structure.
+          </p>
+<div class="flex flex-wrap gap-6 pt-2 font-label-md text-label-md text-surface">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span>120T–350T Electric Injection Machines</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span>Zeiss CMM In-Line Statistical Metrology</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+<span>Class 10,000 Cleanroom Assembly Available</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5">
+<div class="relative rounded-xl overflow-hidden bg-surface-subtle shadow-xl aspect-video sm:aspect-auto sm:h-72">
+<img class="w-full h-full object-cover" data-alt="High angle wide view of pristine automotive plastic injection molding facility with robotic arms, modern white and dark grey industrial machines, technicians in uniforms inspecting components, clean polished epoxy floors, warm and bright professional industrial lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlZQg0op95UfEmkP7ESOx-97nLcEhPCWOH8ka_oYzBdConWlGHH4IHD9nauncsuevMNCU_JHjSPqfG6icD4Ymt449_xPGsxaEaVZlOEs1cLs1lG_r-yzoqFD5PWQbjAB70TNazY0B4YuTsP_zws4nkgHEdqCls3EJtTuy4e1_L8r4DinsqLv5icqVmw4yiD7FLHHvGYIep7v6MjV4HrZwD2RQm06NVelGds_YUNGfwqb_SYxPqJ1O_"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/80 via-transparent to-transparent flex items-end p-4">
+<div class="flex items-center justify-between w-full">
+<span class="font-label-sm text-label-sm text-surface">Plant 1: Sector 24 Faridabad</span>
+<span class="font-label-sm text-label-sm text-surface-container-high">Audited &amp; Active</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Fast-Track RFQ & Engineering Sample Inquiry Form -->
+<section class="w-full py-16 bg-surface-subtle" id="rfq-section">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="rounded-2xl bg-surface-canvas shadow-md p-8 lg:p-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<div class="lg:col-span-5 flex flex-col justify-between">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 text-secondary font-label-md text-label-md uppercase tracking-wider font-bold">
+<span class="w-2.5 h-0.5 bg-secondary"></span>
+                Procurement &amp; Tooling Request
+              </div>
+<h2 class="font-headline-md text-headline-md text-on-surface">
+                Request Engineering Samples &amp; Production RFQ
+              </h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Direct inquiry to our Technical Sales and Tooling Design Team. We guarantee an initial DFM (Design for Manufacturability) feasibility review and budgetary quotation within 24 business hours.
+              </p>
+<div class="rounded-xl bg-surface-muted p-4 space-y-3 font-body-sm text-body-sm">
+<div class="flex items-center gap-2 text-on-surface font-semibold">
+<span class="material-symbols-outlined text-secondary text-[20px]">verified_user</span>
+<span>Mutual NDA Pre-Approved Process</span>
+</div>
+<p class="text-on-surface-variant">
+                  We treat all OEM component prints with strict Tier-1 automotive confidentiality. Upload your 2D print (.PDF) or 3D model (.STEP).
+                </p>
+</div>
+</div>
+<div class="pt-6 font-body-sm text-body-sm text-on-surface-variant">
+              Need immediate engineering consultation? Call <strong class="text-on-surface">+91 129 418 9022</strong> or email <strong class="text-on-surface">rfq@rikkiplastic.com</strong>
+</div>
+</div>
+<!-- The RFQ Form -->
+<div class="lg:col-span-7">
+<form class="space-y-4" onsubmit="handleRfqSubmit(event)">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-sm text-label-sm uppercase font-semibold text-on-surface mb-1.5">First &amp; Last Name *</label>
+<input class="w-full bg-surface-canvas rounded-lg px-4 py-2.5 text-on-surface font-body-md text-body-md shadow-sm border border-border-grid focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="e.g. Vikram Sharma" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase font-semibold text-on-surface mb-1.5">Corporate Email Address *</label>
+<input class="w-full bg-surface-canvas rounded-lg px-4 py-2.5 text-on-surface font-body-md text-body-md shadow-sm border border-border-grid focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="v.sharma@tier1automotive.com" required="" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-sm text-label-sm uppercase font-semibold text-on-surface mb-1.5">Company / OEM Tier *</label>
+<input class="w-full bg-surface-canvas rounded-lg px-4 py-2.5 text-on-surface font-body-md text-body-md shadow-sm border border-border-grid focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="e.g. Marelli / Bosch / Tier-1" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase font-semibold text-on-surface mb-1.5">Annual Projected Volume *</label>
+<select class="w-full bg-surface-canvas rounded-lg px-4 py-2.5 text-on-surface font-body-md text-body-md shadow-sm border border-border-grid focus:outline-none focus:ring-2 focus:ring-primary-container">
+<option>Prototype Batch (&lt; 2,500 pcs)</option>
+<option>Pilot Production (2,500 - 25,000 pcs)</option>
+<option selected="">SOP Serial (25,000 - 150,000 pcs/yr)</option>
+<option>High-Volume Mass (150,000 - 1,000,000+ pcs/yr)</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-sm text-label-sm uppercase font-semibold text-on-surface mb-1.5">Target SOP Launch Window</label>
+<select class="w-full bg-surface-canvas rounded-lg px-4 py-2.5 text-on-surface font-body-md text-body-md shadow-sm border border-border-grid focus:outline-none focus:ring-2 focus:ring-primary-container">
+<option>Immediate / Urgent (&lt; 60 Days)</option>
+<option selected="">Q3 / Q4 2025</option>
+<option>2026 Vehicle Platform</option>
+<option>Concept Development</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase font-semibold text-on-surface mb-1.5">Requested Material Grade</label>
+<select class="w-full bg-surface-canvas rounded-lg px-4 py-2.5 text-on-surface font-body-md text-body-md shadow-sm border border-border-grid focus:outline-none focus:ring-2 focus:ring-primary-container">
+<option selected="">POM-H Low-Friction (Standard)</option>
+<option>PEEK 30% Carbon Fiber Reinforced</option>
+<option>PA66 + 30% Glass Filled</option>
+<option>Custom Tribological Compound</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm uppercase font-semibold text-on-surface mb-1.5">Part Modification Notes / Operating Specs</label>
+<textarea class="w-full bg-surface-canvas rounded-lg px-4 py-2.5 text-on-surface font-body-md text-body-md shadow-sm border border-border-grid focus:outline-none focus:ring-2 focus:ring-primary-container" placeholder="Provide details on motor torque, operating temperature range, shaft interface type (keyed, D-cut, splined), or specific gear backlash criteria..." rows="3"></textarea>
+</div>
+<div class="flex items-center justify-between gap-4 pt-2">
+<label class="flex items-center gap-2 cursor-pointer font-body-sm text-body-sm text-on-surface-variant">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-secondary" type="checkbox"/>
+<span>Include physical sample kit dispatched via DHL Express</span>
+</label>
+<button class="inline-flex items-center justify-between gap-4 bg-secondary hover:bg-brand-crimson-hover text-on-secondary px-7 py-3 rounded-full font-label-md text-label-md transition-all shadow-sm" type="submit">
+<span>Submit Technical RFQ</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+<div class="hidden p-4 rounded-lg bg-surface-container font-label-md text-label-md text-on-surface" id="rfq-success-msg">
+                ✓ Inquiry successfully submitted. A dedicated tooling application engineer will respond with CAD validation within 24 hours.
+              </div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Related Drive System Components Carousel / Grid -->
+<section class="w-full py-16 bg-surface">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-8">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+<div>
+<div class="flex items-center gap-2 text-secondary font-label-md text-label-md uppercase tracking-wider font-bold">
+<span class="w-2.5 h-0.5 bg-secondary"></span>
+            Complementary Sub-Assemblies
+          </div>
+<h2 class="font-headline-md text-headline-md text-on-surface mt-1">
+            Related Automotive Drive &amp; Transmission Components
+          </h2>
+</div>
+<a class="inline-flex items-center gap-1.5 font-label-md text-label-md text-secondary hover:text-brand-crimson-hover font-bold transition-colors" data-path="products" href="#">
+<span>View All Powertrain Products</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Related Item 1 -->
+<div class="rounded-xl bg-surface-canvas shadow-sm overflow-hidden flex flex-col group hover:shadow-md transition-shadow">
+<div class="h-48 w-full bg-surface-subtle overflow-hidden relative p-4 flex items-center justify-center">
+<img class="h-full w-full object-contain group-hover:scale-105 transition-transform duration-300" data-alt="Planetary gear carrier sub assembly with sintered brass pins and glass filled polymer carrier ring on technical clean white studio background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3gIwPFXgdgLgMkJGWNAOdxFfwljVsZ8weriuPt2WX_kKYjc-m9LIu8weTGgruoyWwjnNsGLE2LCa-elGrnPT2HPsUuG1IyKjOfexbj5bog5sWrJHnPNo2dx4WNrVlcrzhhNxK3_lDp5mym0xbEE9xI_BdhjzSC-xmBtIJooBcpvJx6XpztMdFD7YuaD8vcz1ldaUZRlX-7ukTueKpEc6_OruUVJjSwDLGssqW2UPLC70bix95OrkS"/>
+<span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-surface font-label-sm text-label-sm text-on-surface font-semibold shadow-sm">RP-CAR-9021</span>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-3">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">Multi-Stage Transmission</span>
+<h3 class="font-title-md text-title-md text-on-surface mt-1 group-hover:text-secondary transition-colors">
+                Planetary Gear Carrier Assembly
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-2">
+                Reinforced glass-filled PA66 carrier frame with press-fit precision ground stainless guide pins for EV step-down reducers.
+              </p>
+</div>
+<div class="pt-3 border-t border-border-grid flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Max Output: 45 Nm</span>
+<span class="text-secondary font-bold inline-flex items-center gap-1">Details <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+</div>
+<!-- Related Item 2 -->
+<div class="rounded-xl bg-surface-canvas shadow-sm overflow-hidden flex flex-col group hover:shadow-md transition-shadow">
+<div class="h-48 w-full bg-surface-subtle overflow-hidden relative p-4 flex items-center justify-center">
+<img class="h-full w-full object-contain group-hover:scale-105 transition-transform duration-300" data-alt="High precision dual lead worm gear drive shaft in semi crystalline polymer paired with helical spur wheel for steering column actuator." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtGii3cT6aj8pkeJabZCTL8lubaZxEJ7_YpkjhxIGE8KA7jt5hcogIS2y0pLOXsgiHF7Ye6RW3xk1KT9nL-3K3AsyWcR7L-ag4_U2uWn8Fez7EVoF6a1Sn2LpdtmZeAmPMGVwpMYHAbMRWykSZs3x0NG5vMugtjPAn9GQej5VHoDv5lxd2WO8X5ORXBbzhavM6U2nt77mK9GEmFTOlI74M_8jHju78tPiiwn1eySpyu8QWe6uLYf1C"/>
+<span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-surface font-label-sm text-label-sm text-on-surface font-semibold shadow-sm">RP-WRM-4155</span>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-3">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">Steer-by-Wire</span>
+<h3 class="font-title-md text-title-md text-on-surface mt-1 group-hover:text-secondary transition-colors">
+                Dual-Lead Worm Drive Shaft
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-2">
+                High-efficiency self-locking worm and wheel configuration featuring ultra-low lead angles and zero micro-slip back-drive.
+              </p>
+</div>
+<div class="pt-3 border-t border-border-grid flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Efficiency: 82%</span>
+<span class="text-secondary font-bold inline-flex items-center gap-1">Details <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+</div>
+<!-- Related Item 3 -->
+<div class="rounded-xl bg-surface-canvas shadow-sm overflow-hidden flex flex-col group hover:shadow-md transition-shadow">
+<div class="h-48 w-full bg-surface-subtle overflow-hidden relative p-4 flex items-center justify-center">
+<img class="h-full w-full object-contain group-hover:scale-105 transition-transform duration-300" data-alt="Integrated stepper motor drive pinion insert molded with knurled brass core for automotive electronic HVAC blend doors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe-U-ltXU72kaoIt0AwRME6POV8ZHbdJFp-9F_e2JOTQCSNGKSFlHym_JOTk7SXWNN8BPFmtRUbEd2n287t0GdJOlSNi51ljrvRG3uYijAELoBSHFzES9eiopTk3C47vqCh59Nmxk2btzvBXB5yZV4dWRH1500Y6PuKTLmsSlBdGUOD6EKgUk1eJX5tkfXNFYOK1Z8iHTu6Xdt6fZSBEfQG_J4r_u4DXg1H0FNVhyNbo24GDUgL0Kj"/>
+<span class="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-surface font-label-sm text-label-sm text-on-surface font-semibold shadow-sm">RP-PIN-1108</span>
+</div>
+<div class="p-5 flex flex-col flex-1 justify-between gap-3">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase">HVAC &amp; Actuators</span>
+<h3 class="font-title-md text-title-md text-on-surface mt-1 group-hover:text-secondary transition-colors">
+                Integrated Stepper Motor Pinion
+              </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 line-clamp-2">
+                Insert-molded pinion with knurled copper/brass internal bore, tested to withstand 12,000 RPM continuous motor shaft velocities.
+              </p>
+</div>
+<div class="pt-3 border-t border-border-grid flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Module: 0.4 Mn</span>
+<span class="text-secondary font-bold inline-flex items-center gap-1">Details <span class="material-symbols-outlined text-[14px]">arrow_forward</span></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive JavaScript logic for Tabs, Thumbnails, and Form submission -->
+<script>
+    function selectThumb(index) {
+      const thumbs = document.querySelectorAll('.thumb-btn');
+      thumbs.forEach((t, i) => {
+        if (i === index) {
+          t.classList.remove('opacity-70');
+          t.classList.add('ring-2', 'ring-secondary', 'opacity-100');
+        } else {
+          t.classList.remove('ring-2', 'ring-secondary');
+          t.classList.add('opacity-70');
+        }
+      });
+    }
+
+    function openSpecTab(event, tabId) {
+      const contents = document.querySelectorAll('.spec-content');
+      contents.forEach(content => {
+        content.classList.add('hidden');
+        content.classList.remove('block');
+      });
+
+      const buttons = document.querySelectorAll('.spec-tab-btn');
+      buttons.forEach(btn => {
+        btn.classList.remove('bg-primary-container', 'text-on-primary');
+        btn.classList.add('text-on-surface-variant', 'hover:text-on-surface', 'hover:bg-surface-muted');
+      });
+
+      const activeContent = document.getElementById(tabId);
+      if (activeContent) {
+        activeContent.classList.remove('hidden');
+        activeContent.classList.add('block');
+      }
+
+      event.currentTarget.classList.remove('text-on-surface-variant', 'hover:text-on-surface', 'hover:bg-surface-muted');
+      event.currentTarget.classList.add('bg-primary-container', 'text-on-primary');
+    }
+
+    function handleRfqSubmit(e) {
+      e.preventDefault();
+      const msg = document.getElementById('rfq-success-msg');
+      if (msg) {
+        msg.classList.remove('hidden');
+        e.target.reset();
+        setTimeout(() => {
+          msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 100);
+      }
+    }
+  </script>
+</div></main><footer class="w-full bg-brand-navy-dark text-inverse-on-surface"><div class="max-w-7xl mx-auto px-6 lg:px-12 pt-16 pb-12"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-inverse-surface"><div class="lg:col-span-2 flex flex-col gap-5"><div class="flex items-center gap-3"><span class="font-title-md text-title-md text-surface uppercase tracking-tight">Rikki Plastic Pvt. Ltd.</span></div><p class="font-body-sm text-body-sm text-outline-variant max-w-sm">Pioneering precision injection molding and automotive drive transmission systems for Tier-1 mobility leaders worldwide.</p><div class="flex flex-wrap gap-2 pt-2"><span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-inverse-surface text-surface text-label-sm font-label-sm"><span class="material-symbols-outlined text-[14px] text-secondary-container">verified</span>ISO 9001:2015</span><span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-inverse-surface text-surface text-label-sm font-label-sm"><span class="material-symbols-outlined text-[14px] text-secondary-container">verified</span>IATF 16949:2016</span></div></div><div class="flex flex-col gap-3"><h4 class="font-label-lg text-label-lg text-surface uppercase tracking-wider">Products</h4><nav class="flex flex-col gap-2 font-body-sm text-body-sm"><a class="text-outline-variant hover:text-surface transition-colors" data-path="products" href="#">Precision Gears &amp; Actuators</a><a class="text-outline-variant hover:text-surface transition-colors" data-path="products" href="#">Drive Housings</a><a class="text-outline-variant hover:text-surface transition-colors" data-path="products" href="#">HV Connector Assemblies</a><a class="text-outline-variant hover:text-surface transition-colors" data-path="products" href="#">Sensor Mountings</a></nav></div><div class="flex flex-col gap-3"><h4 class="font-label-lg text-label-lg text-surface uppercase tracking-wider">Capabilities</h4><nav class="flex flex-col gap-2 font-body-sm text-body-sm"><a class="text-outline-variant hover:text-surface transition-colors" data-path="capabilities" href="#">Micro Precision Tooling</a><a class="text-outline-variant hover:text-surface transition-colors" data-path="capabilities" href="#">Multi-Cavity Injection</a><a class="text-outline-variant hover:text-surface transition-colors" data-path="capabilities" href="#">Automated Assembly</a><a class="text-outline-variant hover:text-surface transition-colors" data-path="capabilities" href="#">CMM Metrology Lab</a></nav></div><div class="flex flex-col gap-3"><h4 class="font-label-lg text-label-lg text-surface uppercase tracking-wider">Facilities</h4><div class="flex flex-col gap-3 font-body-sm text-body-sm text-outline-variant"><div><p class="font-label-md text-label-md text-surface">Plant 1 (Faridabad)</p><p>Plot 48, Sector 24, Industrial Area, Faridabad, Haryana 121005</p></div><div><p class="font-label-md text-label-md text-surface">Plant 2 (Hosur)</p><p>SIPCOT Industrial Complex, Phase II, Hosur, Tamil Nadu 635109</p></div><div class="pt-1"><p class="text-surface font-label-sm text-label-sm">Email: corporate@rikkiplastic.com</p><p class="text-surface font-label-sm text-label-sm">Phone: +91 129 418 9000</p></div></div></div></div><div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-outline-variant"><div>© 2025 Rikki Plastic Pvt. Ltd. All rights reserved.</div><div class="flex items-center gap-6"><a class="hover:text-surface transition-colors" data-path="sustainability-esg" href="#">ESG Statement</a><a class="hover:text-surface transition-colors" data-path="contact-us" href="#">Privacy Policy</a><a class="hover:text-surface transition-colors" data-path="contact-us" href="#">Supplier Code of Conduct</a></div></div></div></footer></body></html>

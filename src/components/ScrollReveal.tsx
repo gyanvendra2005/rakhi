@@ -4,9 +4,6 @@ import { useEffect } from 'react';
 
 export default function ScrollReveal() {
   useEffect(() => {
-    const elements = document.querySelectorAll('[data-reveal]');
-    if (elements.length === 0) return;
-
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -19,9 +16,29 @@ export default function ScrollReveal() {
       { threshold: 0.15, rootMargin: '0px 0px -60px 0px' }
     );
 
-    elements.forEach((el) => observer.observe(el));
+    const observeAll = (root: ParentNode) => {
+      root.querySelectorAll('[data-reveal]:not(.is-revealed)').forEach((el) => observer.observe(el));
+    };
 
-    return () => observer.disconnect();
+    observeAll(document);
+
+    // Pick up elements added after mount (e.g. a filtered grid re-rendering)
+    const mutationObserver = new MutationObserver((mutations) => {
+      for (const mutation of mutations) {
+        mutation.addedNodes.forEach((node) => {
+          if (!(node instanceof Element)) return;
+          if (node.matches('[data-reveal]')) observer.observe(node);
+          observeAll(node);
+        });
+      }
+    });
+
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      observer.disconnect();
+      mutationObserver.disconnect();
+    };
   }, []);
 
   return null;

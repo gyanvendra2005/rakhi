@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"error":"#ba1a1a","secondary-fixed":"#ffdad6","surface-container-high":"#dce9ff","on-primary-container":"#7b8497","border-grid":"#E2E8F0","inverse-on-surface":"#eaf1ff","secondary-fixed-dim":"#ffb3ad","on-tertiary-container":"#988063","primary-container":"#131c2b","inverse-primary":"#bec7db","surface-muted":"#F1F5F9","on-primary-fixed-variant":"#3e4758","background":"#f8f9ff","surface-container-lowest":"#ffffff","surface-canvas":"#FFFFFF","tertiary-fixed-dim":"#dec2a1","on-secondary-fixed-variant":"#930012","on-secondary":"#ffffff","on-secondary-fixed":"#410003","on-tertiary-fixed":"#271904","on-background":"#0b1c30","secondary-container":"#db3234","brand-navy-dark":"#0B0F19","surface":"#f8f9ff","surface-variant":"#d3e4fe","outline":"#75777d","on-error":"#ffffff","on-primary":"#ffffff","on-tertiary":"#ffffff","on-tertiary-fixed-variant":"#57432a","primary-fixed-dim":"#bec7db","outline-variant":"#c5c6cd","primary-fixed":"#dae2f8","tertiary-fixed":"#fbdebc","inverse-surface":"#213145","surface-container":"#e5eeff","secondary":"#b7131f","tertiary-container":"#271904","on-primary-fixed":"#131c2b","on-surface":"#0b1c30","primary":"#000000","tertiary":"#000000","on-error-container":"#93000a","brand-crimson-hover":"#981019","error-container":"#ffdad6","surface-container-highest":"#d3e4fe","surface-container-low":"#eff4ff","surface-bright":"#f8f9ff","surface-dim":"#cbdbf5","surface-subtle":"#F8FAFC","surface-tint":"#565f70","on-surface-variant":"#45474c","on-secondary-container":"#fffbff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-lg":"1.5rem","space-xl":"2.5rem","space-xs":"0.25rem","space-md":"1rem","space-sm":"0.5rem","margin-mobile":"1.25rem","gutter":"1.5rem","margin":"3rem","gutter-mobile":"1rem"},fontFamily:{"body-sm":["Hanken Grotesk"],"label-md":["Hanken Grotesk"],"label-lg":["Hanken Grotesk"],"display":["Hanken Grotesk"],"display-mobile":["Hanken Grotesk"],"label-sm":["Hanken Grotesk"],"title-md":["Hanken Grotesk"],"body-lg":["Hanken Grotesk"],"headline-sm":["Hanken Grotesk"],"headline-lg":["Hanken Grotesk"],"body-md":["Hanken Grotesk"],"headline-lg-mobile":["Hanken Grotesk"],"headline-md":["Hanken Grotesk"]},fontSize:{"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.005em","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.04em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"display":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"700"}],"display-mobile":["38px",{"lineHeight":"46px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"700"}],"title-md":["18px",{"lineHeight":"26px","letterSpacing":"-0.005em","fontWeight":"600"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["22px",{"lineHeight":"30px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.025em","fontWeight":"700"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg-mobile":["30px",{"lineHeight":"38px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"-0.015em","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-6"><div class="flex items-center gap-4 shrink-0"><img alt="Image from https://rikki-rho.vercel.app/logo2.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X5L0SbivdyFKxnZTHNZoE_o0V2-g_k-QGEmkB_lSisoLtLyOqGSkMv1jggnQeDX2OnPHkE2yUHLJd8yrfvm5b2kZ9ed9uxAh6WkRH--_dIE2Y5qQm7dcbJmyqdKKFa3Gml4IzJ7DPgtB0U_vaJ7Fn_eIigaU8AwhPkkZaFYAXpdBIOZZbfWn8a7ViNKDF1i-k2BMtaCX-oHseQIC_xpWerQgJIqJVyPqeKU8FjiXcVtYxR-C0snpN3Cg"/><span class="font-title-md text-title-md text-on-surface uppercase tracking-tight">Rikki Plastic</span></div><nav class="hidden xl:flex items-center gap-8 h-full" data-active-classes="text-secondary font-semibold border-b-2 border-secondary"><a class="text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors py-2" data-path="about-us" href="#">About Us</a><a class="text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors py-2" data-path="capabilities" href="#">Capabilities</a><a aria-current="page" class="transition-colors py-2 text-secondary font-semibold border-b-2 border-secondary" data-path="products" href="#">Products</a><a class="text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors py-2" data-path="sustainability-esg" href="#">Sustainability &amp; ESG</a><a class="text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg transition-colors py-2" data-path="contact-us" href="#">Contact Us</a></nav><div class="flex items-center gap-4 shrink-0"><div class="hidden sm:flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">language</span><span>EN</span></div><button aria-label="Search" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">search</span></button><a class="hidden sm:inline-flex items-center gap-2 bg-primary-container text-on-primary pl-5 pr-2 py-2 rounded-full font-label-md text-label-md transition-all hover:bg-on-background" data-path="request-a-quote" href="#"><span>Request a Quote</span><span class="w-7 h-7 rounded-full bg-secondary flex items-center justify-center text-on-secondary"><span class="material-symbols-outlined text-[16px]">arrow_forward</span></span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Hero Section -->
+<section class="relative w-full overflow-hidden bg-surface-subtle py-16 lg:py-24">
+<!-- Subtle Ambient Engineering Pattern Background -->
+<div class="absolute inset-0 pointer-events-none opacity-40">
+<svg class="w-full h-full text-border-grid" height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid-pattern" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.75"></path>
+<circle class="text-secondary/30" cx="40" cy="40" fill="currentColor" r="1.5"></circle>
+</pattern>
+</defs>
+<rect fill="url(#grid-pattern)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<!-- Text Column (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col items-start gap-6">
+<!-- Overline Tag -->
+<div class="inline-flex items-center gap-2.5 px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm tracking-widest uppercase">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+            Automotive &amp; Industrial Polymer Solutions
+          </div>
+<h1 class="font-headline-lg lg:font-display text-headline-lg lg:text-display text-on-background tracking-tight">
+            High-Precision Engineered <br class="hidden sm:inline"/>
+<span class="text-secondary font-display">Plastic Components</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+            Delivering micro-tolerance injection molded drive systems, high-stress powertrain modules, and structural interior/exterior assemblies for Tier-1 mobility leaders worldwide.
+          </p>
+<!-- Metric Badges Row -->
+<div class="flex flex-wrap gap-2.5 pt-2">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-canvas shadow-sm text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">tune</span>
+              Sub-Micron (±0.005mm) Tolerance
+            </div>
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-canvas shadow-sm text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+              IATF 16949 &amp; ISO 9001
+            </div>
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-canvas shadow-sm text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">precision_manufacturing</span>
+              28+ Presses (50T–850T)
+            </div>
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-canvas shadow-sm text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">monitoring</span>
+              Six Sigma Ppk &gt; 1.67
+            </div>
+</div>
+<!-- Hero Actions -->
+<div class="flex flex-wrap items-center gap-4 pt-4">
+<a class="inline-flex items-center gap-3 bg-brand-navy-dark text-on-primary pl-6 pr-2 py-2.5 rounded-full font-label-md text-label-md transition-all hover:bg-on-background shadow-md" href="#rfq-section">
+<span>Request Technical RFQ</span>
+<span class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-on-secondary">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</span>
+</a>
+<a class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-surface-canvas text-on-surface font-label-md text-label-md hover:bg-surface-muted transition-colors shadow-sm" href="#polymer-matrix">
+<span class="material-symbols-outlined text-[18px] text-secondary">science</span>
+<span>Polymer Resin Matrix</span>
+</a>
+</div>
+</div>
+<!-- Visual Column (5 Cols) -->
+<div class="lg:col-span-5 relative">
+<div class="relative rounded-xl overflow-hidden bg-surface-canvas shadow-xl p-3">
+<div class="relative rounded-lg overflow-hidden h-[340px] sm:h-[380px] w-full">
+<img class="w-full h-full object-cover object-center" data-alt="Modern automotive precision injection molding cleanroom facility with high tonnage automated robotic presses, orange articulated industrial arms picking high precision black plastic automotive components, clean epoxy floors, bright industrial LED overhead fixtures, technicians in protective gear reviewing engineering schematics on digital tablets." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHiJtoNaEnkDfL0ArZdWJ48alyDcWwYRzncckppzBeoqbjsOfIvBinDUYkWU1gQnguhVkdqgrAx0gaylKd-yaFNHmxBrb6-kCWltNBHnDSmk91dHF95AWPGR8XAlH-bVg8yMcafiQwl0RbXi8EDatWf1kDBA99pICGdF53e-kavB08aydwxlijRtR4ChfuUGL363JiJu1-aiPa9sch2k-hlZYJu7OfpMqnsCXkVN8UneIMvYnGsTBz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-brand-navy-dark/80 via-transparent to-transparent"></div>
+<!-- Floating Plant Spec Card -->
+<div class="absolute bottom-4 left-4 right-4 p-4 rounded-lg bg-surface-canvas/95 backdrop-blur-md shadow-lg flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">precision_manufacturing</span>
+</div>
+<div>
+<h2 class="font-label-lg text-label-lg text-on-surface">Dual Plant Production</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Faridabad &amp; Hosur Automotive Corridors</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold">100%</span>
+<p class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Inline CMM Inspected</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Search & Filtering Bar -->
+<section class="w-full bg-surface-canvas py-8 sticky top-20 z-40 shadow-[0_4px_16px_rgba(0,0,0,0.03)]">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-6">
+<!-- Primary Tabs -->
+<div class="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none" id="categoryTabs">
+<button class="filter-tab active px-5 py-2.5 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-brand-navy-dark text-on-primary shadow-sm" data-category="all">
+          All Products (24)
+        </button>
+<button class="filter-tab px-5 py-2.5 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-subtle text-on-surface hover:bg-surface-muted" data-category="powertrain">
+          Powertrain &amp; Drive Systems
+        </button>
+<button class="filter-tab px-5 py-2.5 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-subtle text-on-surface hover:bg-surface-muted" data-category="interior">
+          Automotive Interior &amp; Dashboard
+        </button>
+<button class="filter-tab px-5 py-2.5 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-subtle text-on-surface hover:bg-surface-muted" data-category="electrical">
+          Electrical &amp; Sensor Housings
+        </button>
+<button class="filter-tab px-5 py-2.5 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-subtle text-on-surface hover:bg-surface-muted" data-category="fluid">
+          Fluid &amp; Thermal Management
+        </button>
+<button class="filter-tab px-5 py-2.5 rounded-full font-label-md text-label-md transition-all whitespace-nowrap bg-surface-subtle text-on-surface hover:bg-surface-muted" data-category="tooling">
+          Custom High-Precision Tooling
+        </button>
+</div>
+<!-- Advanced Technical Query Strip -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-3 bg-surface-subtle p-3 rounded-xl">
+<!-- Search Bar -->
+<div class="md:col-span-5 relative">
+<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full bg-surface-canvas rounded-lg pl-10 pr-4 py-2.5 font-body-md text-body-md text-on-surface outline-none focus:ring-2 focus:ring-brand-navy-dark placeholder:text-outline" id="searchInput" placeholder="Search part name, DIN tolerance, or application..." type="text"/>
+</div>
+<!-- Material Dropdown Filter -->
+<div class="md:col-span-3 relative">
+<select class="w-full appearance-none bg-surface-canvas rounded-lg px-4 py-2.5 font-label-md text-label-md text-on-surface outline-none focus:ring-2 focus:ring-brand-navy-dark cursor-pointer" id="resinFilter">
+<option value="all">Resin: All Engineering Polymers</option>
+<option value="pom">Polyacetal (POM / Delrin)</option>
+<option value="pa66">PA66-GF30 / PA66-GF35</option>
+<option value="pbt">PBT-GF30 (Valox type)</option>
+<option value="pps">PPS / PEEK (High Heat)</option>
+<option value="abs">PC / ABS Flame Retardant</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[20px]">expand_more</span>
+</div>
+<!-- Vehicle Application Segment Dropdown -->
+<div class="md:col-span-3 relative">
+<select class="w-full appearance-none bg-surface-canvas rounded-lg px-4 py-2.5 font-label-md text-label-md text-on-surface outline-none focus:ring-2 focus:ring-brand-navy-dark cursor-pointer" id="segmentFilter">
+<option value="all">Application: All OEM Segments</option>
+<option value="ev">Electric Vehicles (EV / Hybrid)</option>
+<option value="passenger">Passenger Vehicles (ICE)</option>
+<option value="commercial">Commercial Trucks &amp; Heavy OEM</option>
+<option value="twowheeler">2-Wheeler / Electric Scooter</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[20px]">expand_more</span>
+</div>
+<!-- Clear Reset Action -->
+<div class="md:col-span-1 flex items-center justify-center">
+<button class="w-full h-full py-2 bg-surface-canvas hover:bg-surface-muted rounded-lg flex items-center justify-center text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md" id="resetFilters" title="Reset Filters">
+<span class="material-symbols-outlined text-[20px]">refresh</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Catalog Grid -->
+<section class="w-full py-16 bg-surface">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-10">
+<!-- Section Header -->
+<div class="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-bold">Standard &amp; Custom Program Catalog</span>
+<h2 class="font-headline-lg text-headline-lg text-on-background mt-1">Industrial Component Showcase</h2>
+</div>
+<div class="font-label-md text-label-md text-on-surface-variant flex items-center gap-2">
+<span>Showing:</span>
+<span class="font-bold text-on-surface bg-surface-container px-2.5 py-0.5 rounded-full" id="productCounter">6 of 24 Programs</span>
+</div>
+</div>
+<!-- Grid Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="productGrid">
+<!-- Product Card 1 -->
+<div class="product-item group flex flex-col bg-surface-canvas rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300" data-cat="powertrain" data-resin="pom" data-segment="ev passenger">
+<div class="relative h-60 bg-surface-muted overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Macro studio photograph of ultra precision high-torque helical automotive drive gears and planetary gear set molded in black polyacetal POM polymer, resting on steel surface, crisp industrial edge reflections, sub-millimeter gear teeth details, clean studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAl7RfmX2sx_H5zfQyF2zzk4CmuFqSmJ0aek6HJ-O5IewmDAfuQKeBErCbHRiuNy6gfVpE793VPocN3Pw-SLmdjwaJTUHPVRIIG746pCJhdkKFrZzN_uGZa-3cKQSgo8S-iYIPpeoZe4bsePiHHwCamVtj-P0DcjremicvmvrEZwMscuZKW3a17oLSumI3Aa05b8EirqTgjEGMPYrTjZ8ms4OXALg0xGGTAAoRuNX4GtpHaEp6vRzB"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-brand-navy-dark text-on-primary font-label-sm text-label-sm font-semibold">DIN 5–6 Class</span>
+<span class="px-2.5 py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold">EV Powertrain</span>
+</div>
+<div class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-surface-canvas/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm font-mono">
+              ±0.005 mm
+            </div>
+</div>
+<div class="p-6 flex flex-col flex-1 gap-4">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Part Ref: RKP-GR-8840</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors mt-0.5">
+                High-Torque Helical &amp; Planetary Gears
+              </h3>
+</div>
+<!-- Technical Spec Key-Values -->
+<div class="bg-surface-subtle p-3.5 rounded-lg flex flex-col gap-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Polymer Matrix:</span>
+<span class="font-label-md text-label-md text-on-surface">Polyacetal POM / PEEK</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Micro Tolerance:</span>
+<span class="font-label-md text-label-md text-on-surface">DIN 3962 Cl. 5 / ±0.005mm</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Sub-System:</span>
+<span class="font-label-md text-label-md text-secondary">Steer-by-Wire &amp; EV Actuators</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Micro-pitch gears optimized for acoustic dampening (&lt;24dB) and high cyclic fatigue life under continuous reversing torque.
+            </p>
+<div class="pt-2 mt-auto flex items-center justify-between">
+<button class="font-label-md text-label-md text-on-surface hover:text-secondary flex items-center gap-1.5 transition-colors" onclick="openSpecModal('High-Torque Helical &amp; Planetary Gears', 'POM Copolymer &amp; PEEK Tribo-Blend', '±0.005 mm (DIN 5)', 'EV Steer-by-Wire, Electronic Brake Boosters')">
+<span>View Full Specs</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</button>
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm text-outline-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> PPAP Level 3 Ready
+              </span>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="product-item group flex flex-col bg-surface-canvas rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300" data-cat="electrical" data-resin="pbt" data-segment="ev passenger commercial">
+<div class="relative h-60 bg-surface-muted overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Technical product shot of an automotive electronic control unit enclosure with integrated micro connector terminals, molded in flame-retardant glass-reinforced PBT polymer, displaying waterproof silicone gasket groove, precision snap-fits, and laser-marked engineering datamatrix code." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHm6qaJ21M_hUk0hsWY9NefZWX59dXP8k0LCg2d0OPK0IdRZbGEpJs43Mx0oBipq1izQP8gVn7r-wul-v1IBdEh1ZtMWztDmbPbBEfCRscFrYCS4tbJfvpnhz2o4kDo7pGhJwtl1GvOR_fRNvoB7lOS69EFyYK5jyo9HhvEJgx3caZrekW_Vvd-tKju-wfev3y6XF1VOZJabNMrjwEIGKVeN4NBJglciHETGotIOrO1OmfL84D8KuK"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-brand-navy-dark text-on-primary font-label-sm text-label-sm font-semibold">IP6K9K Hermetic</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-canvas text-on-surface font-label-sm text-label-sm font-semibold">Insert Molded</span>
+</div>
+<div class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-surface-canvas/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm font-mono">
+              UL94-V0
+            </div>
+</div>
+<div class="p-6 flex flex-col flex-1 gap-4">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Part Ref: RKP-ECU-419</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors mt-0.5">
+                Sensor Housings &amp; Connector Enclosures
+              </h3>
+</div>
+<!-- Technical Spec Key-Values -->
+<div class="bg-surface-subtle p-3.5 rounded-lg flex flex-col gap-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Polymer Matrix:</span>
+<span class="font-label-md text-label-md text-on-surface">PBT-GF30 (Hydrolysis Resistant)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Sealing Level:</span>
+<span class="font-label-md text-label-md text-on-surface">IP6K9K / Nitrogen Leak &lt;0.1cc</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Sub-System:</span>
+<span class="font-label-md text-label-md text-secondary">ADAS Radar, BMS &amp; Motor ECUs</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Engineered with multi-station insert-molding brass pins and continuous laser weld profiles for extreme underhood conditions.
+            </p>
+<div class="pt-2 mt-auto flex items-center justify-between">
+<button class="font-label-md text-label-md text-on-surface hover:text-secondary flex items-center gap-1.5 transition-colors" onclick="openSpecModal('Sensor Housings &amp; Connector Enclosures', 'PBT-GF30 Hydrolysis Stabilized', 'IP6K9K Sealed, ±0.010 mm', 'BMS Master Modules, 77GHz Radar Mounts')">
+<span>View Full Specs</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</button>
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm text-outline-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> PPAP Level 3 Ready
+              </span>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="product-item group flex flex-col bg-surface-canvas rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300" data-cat="fluid" data-resin="pa66" data-segment="ev commercial">
+<div class="relative h-60 bg-surface-muted overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Engine compartment component photo of a heavy duty glass-filled nylon PA66 automotive coolant fluid distribution manifold, intricate multi-port routing with quick connect spigots, matte carbon black textured technical plastic surface, vibration welded seam visible." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5lJWwu9LICqnaJM70HIc0Tl_LkiK6n1-5hnyYhXSRKhmIBNN0hU1AG3-0wJo60osawViHVjcVdXghEbqNINUsDjkpFheT9ZzKljKBU5R4sB5M5YwAysm2op4lIHoqlO2r7LnYhpG9emwh52KdrUsEUbLu52GVqaC3j-a58Tapyrp2Lci39MuMtJlbIxnOBt9VD0hD6K2GYURkVUlD8HncxVS0TuPnkIK3efsOfCLVhors-FfBmkUt"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-brand-navy-dark text-on-primary font-label-sm text-label-sm font-semibold">&gt;18 Bar Burst</span>
+<span class="px-2.5 py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold">-40°C to +150°C</span>
+</div>
+<div class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-surface-canvas/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm font-mono">
+              PA66-GF35
+            </div>
+</div>
+<div class="p-6 flex flex-col flex-1 gap-4">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Part Ref: RKP-FL-1092</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors mt-0.5">
+                Cooling &amp; Thermal Fluid Manifolds
+              </h3>
+</div>
+<!-- Technical Spec Key-Values -->
+<div class="bg-surface-subtle p-3.5 rounded-lg flex flex-col gap-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Polymer Matrix:</span>
+<span class="font-label-md text-label-md text-on-surface">PA66-GF35 Heat Stabilized</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Burst Pressure:</span>
+<span class="font-label-md text-label-md text-on-surface">&gt; 18.5 Bar @ 125°C</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Sub-System:</span>
+<span class="font-label-md text-label-md text-secondary">EV Battery Chillers &amp; E-Axle</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Vibration-welded multi-chamber cooling assembly engineered to resist aggressive ethylene-glycol anti-freeze cycling.
+            </p>
+<div class="pt-2 mt-auto flex items-center justify-between">
+<button class="font-label-md text-label-md text-on-surface hover:text-secondary flex items-center gap-1.5 transition-colors" onclick="openSpecModal('Cooling &amp; Thermal Fluid Manifolds', 'PA66-GF35 (Heat Aged 1500h)', 'Burst &gt;18 Bar, -40C to 150C', 'High Voltage Battery Thermal Management')">
+<span>View Full Specs</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</button>
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm text-outline-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> PPAP Level 3 Ready
+              </span>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="product-item group flex flex-col bg-surface-canvas rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300" data-cat="interior" data-resin="pom" data-segment="passenger twowheeler">
+<div class="relative h-60 bg-surface-muted overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Precision automotive HVAC actuator assembly components, showing interlocking low-friction gears and aerodynamic air damper flap blades molded in engineering plastics, placed in a quality control inspection lighting booth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-F8aGzUw7tWeHHpb-NLnFgL_p-H74wn38YcH3ymZz0ywFT2uoz7LTmKNQAaYHZM5tkGqO_6UJeRcU43kUpuQcqr8iRWQJL3QQ9ua8-_GKqx0wgKbVhlCQTt6QZqj2NlcAS0wzWRcviSb2vov6l4gE2uGrRYxSQmLG_iwl-HUlaglLmV8WRGNblZ8uL-0KZInJhSQosvG8x-4J2G03wK26dY4Fv7NG6vQcbweCkdvu2DRY4VbQaeEf"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-brand-navy-dark text-on-primary font-label-sm text-label-sm font-semibold">&lt;28 dB Acoustic</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-canvas text-on-surface font-label-sm text-label-sm font-semibold">Low-NVH</span>
+</div>
+<div class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-surface-canvas/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm font-mono">
+              PTFE Lubed
+            </div>
+</div>
+<div class="p-6 flex flex-col flex-1 gap-4">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Part Ref: RKP-HV-702</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors mt-0.5">
+                HVAC Actuator &amp; Air Flap Assemblies
+              </h3>
+</div>
+<!-- Technical Spec Key-Values -->
+<div class="bg-surface-subtle p-3.5 rounded-lg flex flex-col gap-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Polymer Matrix:</span>
+<span class="font-label-md text-label-md text-on-surface">POM + PTFE Low-Friction Alloy</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">NVH Acoustic Limit:</span>
+<span class="font-label-md text-label-md text-on-surface">&lt;28 dB at 100mm distance</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Sub-System:</span>
+<span class="font-label-md text-label-md text-secondary">Dual-Zone Automotive Climate Unit</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Zero-backlash gear segment geometry providing whisper-quiet damper valve modulation across 300,000 continuous cycle tests.
+            </p>
+<div class="pt-2 mt-auto flex items-center justify-between">
+<button class="font-label-md text-label-md text-on-surface hover:text-secondary flex items-center gap-1.5 transition-colors" onclick="openSpecModal('HVAC Actuator &amp; Air Flap Assemblies', 'POM + 15% PTFE Internal Lube', 'Acoustic &lt;28dB, Torque 1.8 Nm', 'Automotive Climate Control HVAC')">
+<span>View Full Specs</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</button>
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm text-outline-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> PPAP Level 3 Ready
+              </span>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="product-item group flex flex-col bg-surface-canvas rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300" data-cat="powertrain" data-resin="pps" data-segment="commercial passenger">
+<div class="relative h-60 bg-surface-muted overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Industrial macro engineering photograph of high-load automotive chassis bushings and suspension pivot dampers molded in dark PPS polymer with bronze insert sleeves, shown under high angle precision factory workshop lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxuTBYKCN1qsI3wsMtuxC3PldEZIIfFnqxBydTndy7RggvxUQgw8Z26o0bxSaxYxCvqbovvnYcVTiP3G0DZPU9p-jvPWsSwZQd1-ki85VaBAaE8LnntYO38wqcTYHvXgWrc9ij25ZckHAc39_jqqqxB9-En5W4v5cLEvB_Ln60RB7YPwOFchIBbtM9uEzhoyZP62p03mAqVb2buPZclMuZIOB7kaToanNipS1tzaxudLlW3WpmqvVN"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-brand-navy-dark text-on-primary font-label-sm text-label-sm font-semibold">Tribological</span>
+<span class="px-2.5 py-1 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold">Heavy Duty</span>
+</div>
+<div class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-surface-canvas/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm font-mono">
+              PPS / PA46
+            </div>
+</div>
+<div class="p-6 flex flex-col flex-1 gap-4">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Part Ref: RKP-BS-5310</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors mt-0.5">
+                High-Load Engine Bushings &amp; Dampers
+              </h3>
+</div>
+<!-- Technical Spec Key-Values -->
+<div class="bg-surface-subtle p-3.5 rounded-lg flex flex-col gap-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Polymer Matrix:</span>
+<span class="font-label-md text-label-md text-on-surface">PA46 / PPS Self-Lubricating</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Compressive Strength:</span>
+<span class="font-label-md text-label-md text-on-surface">&gt; 190 MPa yield</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Sub-System:</span>
+<span class="font-label-md text-label-md text-secondary">Steering Columns &amp; Anti-Roll Bar</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Lightweight metallic-replacement polymer bushings offering superior wear friction coefficient (µ &lt; 0.12) and zero corrosion.
+            </p>
+<div class="pt-2 mt-auto flex items-center justify-between">
+<button class="font-label-md text-label-md text-on-surface hover:text-secondary flex items-center gap-1.5 transition-colors" onclick="openSpecModal('High-Load Engine Bushings &amp; Dampers', 'PA46 / PPS Tribological Carbon Fiber', 'Yield &gt;190 MPa, Friction µ &lt;0.12', 'Chassis, Suspension Linkages &amp; Steering')">
+<span>View Full Specs</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</button>
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm text-outline-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> PPAP Level 3 Ready
+              </span>
+</div>
+</div>
+</div>
+<!-- Product Card 6 -->
+<div class="product-item group flex flex-col bg-surface-canvas rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300" data-cat="interior" data-resin="abs" data-segment="passenger twowheeler">
+<div class="relative h-60 bg-surface-muted overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Detailed studio shot of automotive cockpit steering wheel switch cases and window regulator electro-mechanical housings in sleek matte black PC-ABS polymer, clean razor-sharp parting lines and snap-fits displayed against bright white industrial background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4XNW_4dUGD7PTxGFJ_gcp_BvFhO5CwanRfr3giuFKRkIG7iJO4lkwvav-ibqKE3Vjl1nQ7BfX2evs-81XbylNLlBK4yInHReg5ek0Rp02nyVieigPE-3RlPwf_1frjuSWGQm8efJQZqUpqxkXesCu6xZ0xv654ZaR3kMTREKo6KLto0gYnHontadU1lSt8MIb70nqizy0sfboeoVoVhVKzWyn9MKMYY-UTw9m7GchdPujJ8vdTO5s"/>
+<div class="absolute top-3 left-3 flex flex-wrap gap-1.5">
+<span class="px-2.5 py-1 rounded-full bg-brand-navy-dark text-on-primary font-label-sm text-label-sm font-semibold">Class-A Surface</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-canvas text-on-surface font-label-sm text-label-sm font-semibold">V0 Flame Retardant</span>
+</div>
+<div class="absolute bottom-3 right-3 px-2 py-0.5 rounded bg-surface-canvas/90 backdrop-blur-sm text-on-surface font-label-sm text-label-sm font-mono">
+              PC / ABS
+            </div>
+</div>
+<div class="p-6 flex flex-col flex-1 gap-4">
+<div>
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider font-semibold">Part Ref: RKP-SW-302</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-secondary transition-colors mt-0.5">
+                Electro-Mechanical Switch Gear Cases
+              </h3>
+</div>
+<!-- Technical Spec Key-Values -->
+<div class="bg-surface-subtle p-3.5 rounded-lg flex flex-col gap-2 font-body-sm text-body-sm">
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Polymer Matrix:</span>
+<span class="font-label-md text-label-md text-on-surface">Flame Retardant PC/ABS (UL94-V0)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Dielectric Isolation:</span>
+<span class="font-label-md text-label-md text-on-surface">&gt; 25 kV/mm breakdown</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Sub-System:</span>
+<span class="font-label-md text-label-md text-secondary">Steering Wheels &amp; Center Console</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">
+              Tactile haptic switch boxes with tight micro-switch travel clearances (±0.02mm) and integrated molded snap clips.
+            </p>
+<div class="pt-2 mt-auto flex items-center justify-between">
+<button class="font-label-md text-label-md text-on-surface hover:text-secondary flex items-center gap-1.5 transition-colors" onclick="openSpecModal('Electro-Mechanical Switch Gear Cases', 'Flame Retardant PC/ABS UL94-V0', 'Dielectric &gt;25 kV/mm, ±0.02 mm', 'Steering Wheel Controls &amp; Driver Switchgear')">
+<span>View Full Specs</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</button>
+<span class="inline-flex items-center gap-1 text-label-sm font-label-sm text-outline-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> PPAP Level 3 Ready
+              </span>
+</div>
+</div>
+</div>
+</div>
+<!-- No Results State -->
+<div class="hidden flex-col items-center justify-center p-12 bg-surface-canvas rounded-xl text-center" id="noResultsState">
+<span class="material-symbols-outlined text-[48px] text-outline mb-3">manage_search</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">No matching industrial components found</h4>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-1 mb-6">
+          We manufacture custom tooling and formulations beyond standard catalog items. Speak to our application engineering team.
+        </p>
+<button class="px-5 py-2.5 rounded-full bg-brand-navy-dark text-on-primary font-label-md text-label-md" onclick="resetAllFilters()">
+          Reset Filter Selections
+        </button>
+</div>
+</div>
+</section>
+<!-- Engineering Polymers Compounding Matrix -->
+<section class="w-full py-16 lg:py-24 bg-surface-subtle" id="polymer-matrix">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-12">
+<!-- Section Heading with Visual Tag -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+<div class="lg:col-span-8 flex flex-col gap-3">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-canvas shadow-sm text-secondary font-label-sm text-label-sm uppercase tracking-wider font-bold w-fit">
+<span class="material-symbols-outlined text-[16px]">science</span>
+            Raw Material Processing Capabilities
+          </div>
+<h2 class="font-headline-lg text-headline-lg text-on-background">
+            Engineering Resins &amp; Advanced Polymer Compounding
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">
+            Our automated raw material conveying, drying (dew point &lt;-40°C), and gravimetric dosing silos in Faridabad and Hosur ensure zero moisture volatility across mission-critical compounds.
+          </p>
+</div>
+<div class="lg:col-span-4 flex items-center justify-end">
+<div class="bg-surface-canvas p-4 rounded-xl shadow-sm flex items-center gap-4 w-full sm:w-auto">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-on-background">
+<span class="material-symbols-outlined text-[24px]">thermostat</span>
+</div>
+<div>
+<div class="font-title-md text-title-md text-on-surface font-bold">14,000 MT/Yr</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Automated Resin Processing Throughput</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Resin Table Matrix -->
+<div class="w-full bg-surface-canvas rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md border-collapse">
+<thead>
+<tr class="bg-brand-navy-dark text-on-primary font-label-md text-label-md uppercase tracking-wider">
+<th class="py-4 px-6">Polymer Family</th>
+<th class="py-4 px-6">Reinforcements &amp; Additives</th>
+<th class="py-4 px-6">Tensile Modulus (MPa)</th>
+<th class="py-4 px-6">HDT @ 1.8 MPa</th>
+<th class="py-4 px-6">Primary Automotive Application</th>
+<th class="py-4 px-6 text-right">In-Stock Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-grid">
+<!-- Row 1: PA66 -->
+<tr class="hover:bg-surface-subtle transition-colors">
+<td class="py-4 px-6">
+<div class="font-title-md text-title-md font-bold text-on-surface">PA66 / Polyamide 66</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">ISO 1043: PA66</span>
+</td>
+<td class="py-4 px-6 text-on-surface">15%–50% Glass Fiber, Heat Stabilized, Glycol Resistant</td>
+<td class="py-4 px-6 font-mono font-bold text-on-surface">8,500 – 15,000</td>
+<td class="py-4 px-6 font-mono text-secondary font-bold">245°C</td>
+<td class="py-4 px-6 text-on-surface-variant">EV Battery Chillers, Engine Covers, Oil Separators</td>
+<td class="py-4 px-6 text-right">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-label-sm font-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span> Faridabad &amp; Hosur
+                  </span>
+</td>
+</tr>
+<!-- Row 2: POM -->
+<tr class="hover:bg-surface-subtle transition-colors">
+<td class="py-4 px-6">
+<div class="font-title-md text-title-md font-bold text-on-surface">POM Copolymer (Polyacetal)</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">ISO 1043: POM</span>
+</td>
+<td class="py-4 px-6 text-on-surface">Low Wear PTFE, Carbon Fiber, Mineral Anti-Static</td>
+<td class="py-4 px-6 font-mono font-bold text-on-surface">2,800 – 4,500</td>
+<td class="py-4 px-6 font-mono text-secondary font-bold">110°C</td>
+<td class="py-4 px-6 text-on-surface-variant">Helical Drive Gears, Window Lift Sliders, Fuel Sender Flanges</td>
+<td class="py-4 px-6 text-right">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-label-sm font-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span> Active Stock
+                  </span>
+</td>
+</tr>
+<!-- Row 3: PBT -->
+<tr class="hover:bg-surface-subtle transition-colors">
+<td class="py-4 px-6">
+<div class="font-title-md text-title-md font-bold text-on-surface">PBT / Polybutylene Terephthalate</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">ISO 1043: PBT</span>
+</td>
+<td class="py-4 px-6 text-on-surface">20%–30% Glass Filled, UL94-V0, Low Warpage</td>
+<td class="py-4 px-6 font-mono font-bold text-on-surface">6,000 – 10,200</td>
+<td class="py-4 px-6 font-mono text-secondary font-bold">205°C</td>
+<td class="py-4 px-6 text-on-surface-variant">High Voltage EV Connectors, Ignition Coil Cases, ADAS Plugs</td>
+<td class="py-4 px-6 text-right">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-label-sm font-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span> Active Stock
+                  </span>
+</td>
+</tr>
+<!-- Row 4: PPS -->
+<tr class="hover:bg-surface-subtle transition-colors">
+<td class="py-4 px-6">
+<div class="font-title-md text-title-md font-bold text-on-surface">PPS (Polyphenylene Sulfide)</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">ISO 1043: PPS</span>
+</td>
+<td class="py-4 px-6 text-on-surface">40% Glass &amp; Mineral Hybrid, Extreme Chemical Shield</td>
+<td class="py-4 px-6 font-mono font-bold text-on-surface">14,000 – 18,500</td>
+<td class="py-4 px-6 font-mono text-secondary font-bold">260°C</td>
+<td class="py-4 px-6 text-on-surface-variant">Electronic Water Pump Impellers, High-Heat E-Motor Bushings</td>
+<td class="py-4 px-6 text-right">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container text-on-surface text-label-sm font-label-sm font-semibold">
+                    Automotive Dedicated
+                  </span>
+</td>
+</tr>
+<!-- Row 5: Circular Recycled Resin -->
+<tr class="hover:bg-surface-subtle transition-colors">
+<td class="py-4 px-6">
+<div class="font-title-md text-title-md font-bold text-on-surface">PCR Circular Resins (r-PP &amp; r-PA)</div>
+<span class="font-label-sm text-label-sm text-emerald-700 font-mono">ESG Decarbonized</span>
+</td>
+<td class="py-4 px-6 text-on-surface">30%–70% Certified Post-Consumer Recycled Content (ISCC+)</td>
+<td class="py-4 px-6 font-mono font-bold text-on-surface">1,800 – 4,800</td>
+<td class="py-4 px-6 font-mono text-secondary font-bold">125°C</td>
+<td class="py-4 px-6 text-on-surface-variant">HVAC Ducts, Underbody Aero Shields, Wheel Arch Liners</td>
+<td class="py-4 px-6 text-right">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-label-sm font-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-emerald-500"></span> Circular Certified
+                  </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<!-- OEM Custom Tooling & Development Workflow -->
+<section class="w-full py-16 lg:py-24 bg-brand-navy-dark text-inverse-on-surface relative overflow-hidden">
+<!-- Glow Accent -->
+<div class="absolute -right-40 -top-40 w-96 h-96 bg-secondary/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col gap-12 relative z-10">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+<div>
+<span class="font-label-sm text-label-sm text-secondary-container uppercase tracking-widest font-bold">Turnkey Tooling to Mass Production</span>
+<h2 class="font-headline-lg text-headline-lg text-surface mt-1">OEM Rapid Development Framework</h2>
+</div>
+<p class="font-body-md text-body-md text-outline-variant max-w-md">
+          From Moldflow part optimization to production hardened multi-cavity injection molds with guaranteed 1,000,000 shot tooling warranties.
+        </p>
+</div>
+<!-- 4-Step Architecture Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Step 1 -->
+<div class="p-6 rounded-xl bg-inverse-surface/60 backdrop-blur-sm flex flex-col gap-4 relative group hover:bg-inverse-surface transition-all duration-300">
+<div class="flex items-center justify-between">
+<span class="font-display text-[32px] font-bold text-secondary-container">01</span>
+<div class="w-10 h-10 rounded-full bg-surface/10 flex items-center justify-center text-surface">
+<span class="material-symbols-outlined text-[20px]">view_in_ar</span>
+</div>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-surface font-bold">DFM &amp; Moldflow</h3>
+<p class="font-body-sm text-body-sm text-outline-variant mt-2 leading-relaxed">
+              Autodesk Moldflow warpage prediction, gate location analysis, and fiber orientation simulation before steel cutting.
+            </p>
+</div>
+<div class="pt-2 mt-auto font-label-sm text-label-sm text-secondary-container flex items-center gap-1">
+<span>Lead: 5–7 Working Days</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="p-6 rounded-xl bg-inverse-surface/60 backdrop-blur-sm flex flex-col gap-4 relative group hover:bg-inverse-surface transition-all duration-300">
+<div class="flex items-center justify-between">
+<span class="font-display text-[32px] font-bold text-secondary-container">02</span>
+<div class="w-10 h-10 rounded-full bg-surface/10 flex items-center justify-center text-surface">
+<span class="material-symbols-outlined text-[20px]">precision_manufacturing</span>
+</div>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-surface font-bold">In-House CNC &amp; EDM</h3>
+<p class="font-body-sm text-body-sm text-outline-variant mt-2 leading-relaxed">
+              High-speed 5-axis Mazak milling and Sodick wire-cut EDM tooling centers maintaining ±0.002mm core/cavity precision.
+            </p>
+</div>
+<div class="pt-2 mt-auto font-label-sm text-label-sm text-secondary-container flex items-center gap-1">
+<span>Hardened H13 &amp; Stavax Steel</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="p-6 rounded-xl bg-inverse-surface/60 backdrop-blur-sm flex flex-col gap-4 relative group hover:bg-inverse-surface transition-all duration-300">
+<div class="flex items-center justify-between">
+<span class="font-display text-[32px] font-bold text-secondary-container">03</span>
+<div class="w-10 h-10 rounded-full bg-surface/10 flex items-center justify-center text-surface">
+<span class="material-symbols-outlined text-[20px]">biotech</span>
+</div>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-surface font-bold">CMM 3D Metrology</h3>
+<p class="font-body-sm text-body-sm text-outline-variant mt-2 leading-relaxed">
+              Zeiss bridge CMM and optical scanning providing complete 100-point dimensional verification and PPAP Level 3 documentation.
+            </p>
+</div>
+<div class="pt-2 mt-auto font-label-sm text-label-sm text-secondary-container flex items-center gap-1">
+<span>Cp / Cpk &gt; 1.67 Guarantee</span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="p-6 rounded-xl bg-inverse-surface/60 backdrop-blur-sm flex flex-col gap-4 relative group hover:bg-inverse-surface transition-all duration-300">
+<div class="flex items-center justify-between">
+<span class="font-display text-[32px] font-bold text-secondary-container">04</span>
+<div class="w-10 h-10 rounded-full bg-surface/10 flex items-center justify-center text-surface">
+<span class="material-symbols-outlined text-[20px]">rocket_launch</span>
+</div>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-surface font-bold">APQP Mass Ramp</h3>
+<p class="font-body-sm text-body-sm text-outline-variant mt-2 leading-relaxed">
+              Automated multi-cavity injection molding with automated robotic sprue cutting, camera vision inspection, and Kan-ban delivery.
+            </p>
+</div>
+<div class="pt-2 mt-auto font-label-sm text-label-sm text-secondary-container flex items-center gap-1">
+<span>24/7 Automated Production</span>
+</div>
+</div>
+</div>
+<!-- Workshop Image Grid Feature -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 pt-4 items-center">
+<div class="relative rounded-xl overflow-hidden h-72">
+<img class="w-full h-full object-cover" data-alt="Modern mold-making toolroom workshop with high-end CNC Mazak vertical machining centers, EDM wire machines, metal toolmakers calibrating steel injection mold cavities with micrometers and granite surface plates." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwpP7QcKfiqnC5VAyQly7-86GDY73httncmGLp4I9CN7B8_bBqW35uqS0vWkbmMrwUABfLNCcRQ20KmmDwgRa-Bicp7lyJC_FmQcmKMqPKsttOow5oeaCorGj7Htys55jg7f_HsXrQxxZGX0mkPYBH6bHV6vwn876FCp8xvLRy0JdAucAeb9Pul1_BdTbzH27uCXGcRKMkbxdMbASUko3yLu5p8LBq82C3fdMZCkikscie3bLICocr"/>
+<div class="absolute inset-0 bg-gradient-to-t from-brand-navy-dark/90 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<p class="font-label-lg text-label-lg text-surface">In-House Toolroom &amp; Die Maintenance</p>
+<p class="font-body-sm text-body-sm text-outline-variant">Faridabad Center of Tooling Excellence</p>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden h-72">
+<img class="w-full h-full object-cover" data-alt="Climate-controlled automotive metrology laboratory with Zeiss coordinate measuring machine (CMM) probing an intricate plastic automotive actuator housing, computerized 3D tolerance color map displayed on adjacent monitors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpdz4gOzxrRkipEFrB5nCErwrwvFR4hEJoErtWABfKj1VodQAOpsTOaBiU7nBLjDisKzqr32bPnss_MeNu6ViCg9D62xaPiQNTneNY_uQzabxjKp80qt8FAC3oz-HnLIOSjjUAdbL-hnRIDxd_WIVT641hj9f2unnP23L2edJa9W_qeFbRgennGAmU_hv9QS1KmZtYq61SCMZapNNbR1M0tuGtIR7550lw324rIRfeYie_7GhbyDn9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-brand-navy-dark/90 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4">
+<p class="font-label-lg text-label-lg text-surface">Metrology &amp; Quality Lab</p>
+<p class="font-body-sm text-body-sm text-outline-variant">Zeiss CMM Bridge, Optical 3D Scanners &amp; Tensile Testers</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Inquiry & RFQ Call-To-Action Card -->
+<section class="w-full py-16 lg:py-24 bg-surface" id="rfq-section">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="rounded-2xl bg-surface-subtle p-8 lg:p-14 shadow-lg overflow-hidden relative">
+<!-- Crimson Accent Background Geometry -->
+<div class="absolute top-0 right-0 w-80 h-80 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center relative z-10">
+<div class="lg:col-span-7 flex flex-col gap-5">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary/10 text-secondary font-label-sm text-label-sm uppercase tracking-wider font-bold w-fit">
+<span class="material-symbols-outlined text-[16px]">speed</span>
+              24-Hour Engineering Turnaround
+            </div>
+<h2 class="font-headline-lg text-headline-lg text-on-background">
+              Need Custom Injection Molded Tooling or Samples?
+            </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+              Upload your 3D CAD files (.STEP, .IGES, .X_T) or send part blueprints for immediate DFM feedback, mold cavitation recommendations, and formal OEM quotation.
+            </p>
+<div class="flex flex-wrap gap-4 pt-2">
+<div class="flex items-center gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Mutual Non-Disclosure Agreement (NDA) Protected</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">check_circle</span>
+<span>Free Moldflow Fill &amp; Gate Simulation</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col sm:flex-row lg:flex-col gap-4">
+<a class="w-full inline-flex items-center justify-between bg-secondary hover:bg-brand-crimson-hover text-on-secondary px-6 py-4 rounded-full font-label-md text-label-md transition-all shadow-md group" href="mailto:corporate@rikkiplastic.com?subject=OEM%20Technical%20RFQ%20Submission">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Submit Technical RFQ</span>
+</span>
+<span class="w-7 h-7 rounded-full bg-surface-canvas/20 flex items-center justify-center text-on-secondary group-hover:translate-x-1 transition-transform">
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</a>
+<button class="w-full inline-flex items-center justify-between bg-surface-canvas hover:bg-surface-muted text-on-surface px-6 py-4 rounded-full font-label-md text-label-md transition-all shadow-sm" onclick="downloadCatalogAlert()">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">download</span>
+<span>Download Technical Catalog (PDF)</span>
+</span>
+<span class="font-mono text-label-sm text-outline">18.4 MB</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Technical Spec Modal (Hidden by Default) -->
+<div class="fixed inset-0 z-50 hidden bg-brand-navy-dark/70 backdrop-blur-sm flex items-center justify-center p-4" id="specModal">
+<div class="bg-surface-canvas rounded-2xl max-w-xl w-full p-6 lg:p-8 shadow-2xl relative animate-in fade-in zoom-in-95 duration-200">
+<!-- Close Button -->
+<button class="absolute top-4 right-4 w-9 h-9 rounded-full bg-surface-subtle hover:bg-surface-muted flex items-center justify-center text-on-surface-variant transition-colors" onclick="closeSpecModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+<!-- Modal Content Header -->
+<div class="flex items-center gap-2 text-secondary font-label-sm text-label-sm uppercase tracking-wider font-bold mb-2">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>IATF 16949 Engineering Datasheet</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-background mb-4" id="modalTitle">
+        Component Specification
+      </h3>
+<div class="bg-surface-subtle rounded-xl p-4 flex flex-col gap-3 font-body-sm text-body-sm mb-6">
+<div class="flex items-center justify-between pb-2 border-b border-border-grid">
+<span class="text-on-surface-variant">Selected Compound:</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold" id="modalResin">-</span>
+</div>
+<div class="flex items-center justify-between pb-2 border-b border-border-grid">
+<span class="text-on-surface-variant">Critical Tolerance Class:</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold" id="modalTol">-</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-on-surface-variant">Validated Target System:</span>
+<span class="font-label-md text-label-md text-secondary font-semibold" id="modalApp">-</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+        Full production IMDS entry, PPAP documentation packages, and mechanical aging charts available upon NDA clearance with our sales engineering office.
+      </p>
+<div class="flex gap-3">
+<a class="flex-1 bg-brand-navy-dark hover:bg-on-background text-on-primary py-3 rounded-full font-label-md text-label-md text-center transition-colors" href="#rfq-section" onclick="closeSpecModal()">
+          Request Production Samples
+        </a>
+<button class="px-5 py-3 rounded-full bg-surface-subtle hover:bg-surface-muted font-label-md text-label-md text-on-surface transition-colors" onclick="closeSpecModal()">
+          Close
+        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Vanilla JS Filter & Modal Behavior -->
+<script>
+  // DOM Elements
+  const tabs = document.querySelectorAll('.filter-tab');
+  const searchInput = document.getElementById('searchInput');
+  const resinFilter = document.getElementById('resinFilter');
+  const segmentFilter = document.getElementById('segmentFilter');
+  const resetBtn = document.getElementById('resetFilters');
+  const productCards = document.querySelectorAll('.product-item');
+  const noResultsState = document.getElementById('noResultsState');
+  const productCounter = document.getElementById('productCounter');
+
+  let activeCategory = 'all';
+
+  // Category Tab Click
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => {
+        t.classList.remove('bg-brand-navy-dark', 'text-on-primary');
+        t.classList.add('bg-surface-subtle', 'text-on-surface');
+      });
+      tab.classList.remove('bg-surface-subtle', 'text-on-surface');
+      tab.classList.add('bg-brand-navy-dark', 'text-on-primary');
+      activeCategory = tab.dataset.category;
+      applyFilters();
+    });
+  });
+
+  // Input & Select Listeners
+  searchInput.addEventListener('input', applyFilters);
+  resinFilter.addEventListener('change', applyFilters);
+  segmentFilter.addEventListener('change', applyFilters);
+  resetBtn.addEventListener('click', resetAllFilters);
+
+  function resetAllFilters() {
+    searchInput.value = '';
+    resinFilter.value = 'all';
+    segmentFilter.value = 'all';
+    activeCategory = 'all';
+    tabs.forEach((t, i) => {
+      if (i === 0) {
+        t.classList.remove('bg-surface-subtle', 'text-on-surface');
+        t.classList.add('bg-brand-navy-dark', 'text-on-primary');
+      } else {
+        t.classList.remove('bg-brand-navy-dark', 'text-on-primary');
+        t.classList.add('bg-surface-subtle', 'text-on-surface');
+      }
+    });
+    applyFilters();
+  }
+
+  function applyFilters() {
+    const query = searchInput.value.toLowerCase().trim();
+    const selectedResin = resinFilter.value;
+    const selectedSegment = segmentFilter.value;
+    let visibleCount = 0;
+
+    productCards.forEach(card => {
+      const cardCat = card.dataset.cat || '';
+      const cardResin = card.dataset.resin || '';
+      const cardSegment = card.dataset.segment || '';
+      const cardText = card.innerText.toLowerCase();
+
+      const matchesCat = (activeCategory === 'all') || (cardCat === activeCategory);
+      const matchesResin = (selectedResin === 'all') || (cardResin === selectedResin);
+      const matchesSegment = (selectedSegment === 'all') || cardSegment.includes(selectedSegment);
+      const matchesSearch = query === '' || cardText.includes(query);
+
+      if (matchesCat && matchesResin && matchesSegment && matchesSearch) {
+        card.classList.remove('hidden');
+        card.classList.add('flex');
+        visibleCount++;
+      } else {
+        card.classList.remove('flex');
+        card.classList.add('hidden');
+      }
+    });
+
+    if (visibleCount === 0) {
+      noResultsState.classList.remove('hidden');
+      noResultsState.classList.add('flex');
+    } else {
+      noResultsState.classList.add('hidden');
+      noResultsState.classList.remove('flex');
+    }
+
+    productCounter.textContent = `${visibleCount} of 24 Programs`;
+  }
+
+  // Spec Modal Handlers
+  function openSpecModal(title, resin, tol, app) {
+    document.getElementById('modalTitle').textContent = title;
+    document.getElementById('modalResin').textContent = resin;
+    document.getElementById('modalTol').textContent = tol;
+    document.getElementById('modalApp').textContent = app;
+    document.getElementById('specModal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeSpecModal() {
+    document.getElementById('specModal').classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  function downloadCatalogAlert() {
+    const btn = event.currentTarget;
+    const originalText = btn.innerHTML;
+    btn.innerHTML = `<span class="flex items-center gap-2"><span class="material-symbols-outlined animate-spin text-[20px]">sync</span><span>Packaging Spec PDF...</span></span>`;
+    setTimeout(() => {
+      btn.innerHTML = `<span class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-600 text-[20px]">check_circle</span><span>Download Complete</span></span><span class="font-mono text-label-sm text-outline">18.4 MB</span>`;
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+      }, 3000);
+    }, 1200);
+  }
+
+  // Close modal on Escape key
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeSpecModal();
+  });
+</script></main><footer class="w-full bg-brand-navy-dark text-inverse-on-surface"><div class="max-w-7xl mx-auto px-6 lg:px-12 pt-16 pb-12"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-inverse-surface"><div class="lg:col-span-2 flex flex-col gap-5"><div class="flex items-center gap-3"><span class="font-title-md text-title-md text-surface uppercase tracking-tight">Rikki Plastic Pvt. Ltd.</span></div><p class="font-body-sm text-body-sm text-outline-variant max-w-sm">Pioneering precision injection molding and automotive drive transmission systems for Tier-1 mobility leaders worldwide.</p><div class="flex flex-wrap gap-2 pt-2"><span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-inverse-surface text-surface text-label-sm font-label-sm"><span class="material-symbols-outlined text-[14px] text-secondary-container">verified</span>ISO 9001:2015</span><span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-inverse-surface text-surface text-label-sm font-label-sm"><span class="material-symbols-outlined text-[14px] text-secondary-container">verified</span>IATF 16949:2016</span></div></div><div class="flex flex-col gap-3"><h4 class="font-label-lg text-label-lg text-surface uppercase tracking-wider">Products</h4><nav class="flex flex-col gap-2 font-body-sm text-body-sm"><a class="text-outline-variant hover:text-surface transition-colors" data-path="products" href="#">Precision Gears &amp; Actuators</a><a class="text-outline-variant hover:text-surface transition-colors" data-path="products" href="#">Drive Housings</a><a class="text-outline-variant hover:text-surface transition-colors" data-path="products" href="#">HV Connector Assemblies</a><a class="text-outline-variant hover:text-surface transition-colors" data-path="products" href="#">Sensor Mountings</a></nav></div><div class="flex flex-col gap-3"><h4 class="font-label-lg text-label-lg text-surface uppercase tracking-wider">Capabilities</h4><nav class="flex flex-col gap-2 font-body-sm text-body-sm"><a class="text-outline-variant hover:text-surface transition-colors" data-path="capabilities" href="#">Micro Precision Tooling</a><a class="text-outline-variant hover:text-surface transition-colors" data-path="capabilities" href="#">Multi-Cavity Injection</a><a class="text-outline-variant hover:text-surface transition-colors" data-path="capabilities" href="#">Automated Assembly</a><a class="text-outline-variant hover:text-surface transition-colors" data-path="capabilities" href="#">CMM Metrology Lab</a></nav></div><div class="flex flex-col gap-3"><h4 class="font-label-lg text-label-lg text-surface uppercase tracking-wider">Facilities</h4><div class="flex flex-col gap-3 font-body-sm text-body-sm text-outline-variant"><div><p class="font-label-md text-label-md text-surface">Plant 1 (Faridabad)</p><p>Plot 48, Sector 24, Industrial Area, Faridabad, Haryana 121005</p></div><div><p class="font-label-md text-label-md text-surface">Plant 2 (Hosur)</p><p>SIPCOT Industrial Complex, Phase II, Hosur, Tamil Nadu 635109</p></div><div class="pt-1"><p class="text-surface font-label-sm text-label-sm">Email: corporate@rikkiplastic.com</p><p class="text-surface font-label-sm text-label-sm">Phone: +91 129 418 9000</p></div></div></div></div><div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-outline-variant"><div>© 2025 Rikki Plastic Pvt. Ltd. All rights reserved.</div><div class="flex items-center gap-6"><a class="hover:text-surface transition-colors" data-path="sustainability-esg" href="#">ESG Statement</a><a class="hover:text-surface transition-colors" data-path="contact-us" href="#">Privacy Policy</a><a class="hover:text-surface transition-colors" data-path="contact-us" href="#">Supplier Code of Conduct</a></div></div></div></footer></body></html>
